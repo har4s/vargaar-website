@@ -1,1 +1,1 @@
-export { Reinsurance } from "./reinsurance"
+export { Reinsurance } from "./reinsurance";

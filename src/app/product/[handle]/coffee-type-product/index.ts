@@ -1,1 +1,1 @@
-export { CoffeeTypeProduct } from "./coffee-type-product"
+export { CoffeeTypeProduct } from "./coffee-type-product";
