@@ -3,7 +3,7 @@ import localFont from 'next/font/local'
 export const abarFont = localFont({
     src: [
         {
-            path: "./woff2/AbarMid-Regular.woff2",
+            path: "./woff2/AbarLow-Regular.woff2",
             style: "normal",
             weight: "normal",
         },
