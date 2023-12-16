@@ -1,0 +1,86 @@
+.root {
+	@apply relative overflow-hidden bg-[#F7F4ED] py-12 lg:py-32;
+}
+
+.Container {
+	@apply container relative;
+	@apply flex w-full flex-col lg:flex-row lg:items-center lg:justify-start;
+	@apply lg:flex-nowrap;
+	@apply gap-y-10;
+}
+
+.txt {
+	@apply relative z-10;
+	@apply flex w-full flex-col;
+	@apply basis-1/2;
+	@apply gap-y-5;
+}
+
+.images {
+	@apply overflow-visible;
+	@apply relative;
+	@apply flex w-full flex-row items-center justify-start;
+	@apply basis-1/2;
+}
+
+.title {
+	@apply font-display text-3xl font-bold lg:text-[3.0555555556dvw];
+	@apply text-secondary;
+	line-height: 1.2;
+}
+.title strong {
+	@apply block w-full;
+	@apply text-[#DBAB00];
+	@apply invisible;
+	@apply h-0;
+}
+
+.icons {
+	@apply flex flex-row items-center justify-center gap-x-5 lg:justify-start;
+}
+
+.icons div {
+	@apply rounded-full p-3;
+	@apply border border-secondary;
+}
+
+.icons a svg {
+	@apply h-6 w-6;
+	@apply text-secondary;
+}
+
+.imageContainer {
+	@apply relative aspect-square h-full w-full lg:w-[23dvw];
+}
+
+.image {
+	@apply h-full w-full object-cover object-center;
+}
+
+.imageContainer:nth-child(1) {
+	position: relative;
+	z-index: 3;
+}
+
+.imageContainer:nth-child(2) {
+	position: relative;
+	z-index: 2;
+}
+
+.imageContainer:nth-child(3) {
+	position: relative;
+	z-index: 1;
+}
+
+@screen lg {
+	.root::before {
+		content: "";
+		background: linear-gradient(90deg, rgba(247, 244, 237, 0) 0%, #f7f4ed 100%);
+		width: 13%;
+		height: 100%;
+		position: absolute;
+		right: 30%;
+		top: 0;
+		z-index: 9;
+	}
+}

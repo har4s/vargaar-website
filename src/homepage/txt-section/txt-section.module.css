@@ -1,0 +1,33 @@
+.root {
+	@apply py-32;
+}
+.Container {
+	@apply container flex flex-col items-center justify-start;
+	@apply gap-y-10;
+}
+
+.title {
+	@apply max-w-screen-2xl;
+	@apply text-center font-display text-5xl font-black lg:text-[5.5555555556dvw];
+	@apply text-primary;
+	line-height: 1.2;
+}
+
+.subtitle {
+	@apply max-w-screen-lg;
+	@apply text-center text-lg font-medium lg:text-[1.333332dvw];
+	@apply text-secondary-700;
+	line-height: 1.4;
+}
+.actions {
+	@apply flex flex-row items-center justify-center gap-x-10;
+}
+
+.imageContainer {
+	@apply relative inline-flex h-[1em] w-auto overflow-hidden rounded-full;
+	aspect-ratio: 130/70;
+	margin: 0 0.1em -0.25em;
+}
+.image {
+	@apply h-full w-full object-cover object-center;
+}

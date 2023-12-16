@@ -1,0 +1,5 @@
+.root {
+	@apply font-display text-8xl font-black lg:text-[7.2916666667dvw];
+	@apply whitespace-nowrap;
+	@apply pl-20 pr-32;
+}

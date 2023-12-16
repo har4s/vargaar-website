@@ -1,0 +1,59 @@
+.root {
+	@apply overflow-hidden;
+	@apply relative py-10 lg:py-32;
+	@apply bg-primary;
+}
+.Container {
+	@apply container flex flex-col items-center justify-center;
+}
+
+.heading {
+	@apply z-10;
+	@apply flex flex-col items-center justify-center;
+	@apply mx-[30px] lg:max-w-[41.6666666667dvw];
+}
+
+.title {
+	@apply text-center;
+	@apply text-3xl lg:text-[3.0555555556dvw];
+	@apply text-white;
+	@apply font-display font-bold;
+	line-height: 1;
+}
+.title strong {
+	line-height: 1.4;
+	@apply text-secondary;
+}
+
+.images {
+	@apply flex items-center justify-center;
+}
+.imageContainer {
+	@apply aspect-square h-auto w-full lg:w-[18dvw];
+	@apply relative top-0 lg:absolute;
+}
+.image {
+	@apply h-full w-full object-cover object-center;
+}
+
+@media (max-width: 1024px) {
+	.imageContainer {
+		@apply !translate-y-0;
+	}
+	.imageContainer:nth-child(1) {
+		@apply !translate-x-4 !translate-y-5 -rotate-6;
+	}
+
+	.imageContainer:nth-child(2) {
+		@apply !translate-y-10 rotate-12;
+	}
+}
+@screen lg {
+	.imageContainer:nth-child(1) {
+		left: 7%;
+	}
+
+	.imageContainer:nth-child(2) {
+		left: 75%;
+	}
+}

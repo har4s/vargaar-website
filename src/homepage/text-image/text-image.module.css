@@ -1,0 +1,39 @@
+.root {
+	@apply container py-20 lg:py-32;
+	@apply bg-white;
+}
+.Container {
+	@apply flex flex-col lg:flex-row;
+}
+.imageContainer {
+	@apply flex w-full basis-2/5 flex-col;
+	@apply relative overflow-hidden;
+}
+.image {
+	@apply h-full w-full object-cover object-center;
+}
+.text {
+	@apply flex w-full basis-3/5 flex-col;
+	@apply lg:py-14 lg:pl-[10dvw];
+	@apply mb-14 lg:mb-0;
+	@apply gap-y-5 lg:gap-y-[2dvw];
+}
+.title {
+	@apply text-primary;
+	@apply font-display text-4xl font-black lg:text-[4dvw];
+	@apply mb-3 lg:mb-[1dvw];
+	line-height: 1;
+}
+.subtitle {
+	@apply text-secondary-800;
+	@apply font-body text-xl font-semibold lg:text-[1.8dvw];
+	line-height: 1.4;
+}
+.content {
+	@apply text-secondary-700;
+	@apply font-body text-lg font-normal lg:text-[1.3dvw];
+	line-height: 1.4;
+}
+.actions {
+	@apply flex flex-row items-center;
+}

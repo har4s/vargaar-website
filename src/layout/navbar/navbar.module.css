@@ -1,0 +1,48 @@
+.root {
+	@apply fixed left-0 top-0 z-30 w-full;
+	@apply transform transition-all duration-500;
+	@apply bg-white;
+}
+
+.root.hidden {
+	@apply -translate-y-full;
+}
+
+.root.scrolled {
+	@apply bg-white;
+}
+
+.Container {
+	@apply container flex flex-row items-center justify-between py-3;
+}
+.logoContainer {
+	@apply inline-flex w-full justify-center;
+}
+.logo {
+	@apply h-10 w-auto text-primary lg:h-16;
+}
+
+.row {
+	@apply flex w-full flex-row items-center gap-x-4;
+}
+
+.nav {
+	@apply hidden lg:flex;
+}
+.navItem {
+}
+.navLink {
+	@apply flex items-center;
+}
+.navLink span {
+	@apply text-base font-medium text-secondary-800;
+}
+.navItem:hover .navLink span {
+	@apply text-corn;
+}
+.arrow {
+	@apply mr-1 inline-flex;
+}
+.arrow svg {
+	@apply h-5 w-5 text-corn;
+}

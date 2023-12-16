@@ -1,0 +1,8 @@
+.root {
+	@apply relative w-full overflow-hidden;
+	@apply pt-[100%] lg:pt-[40.722222%];
+	@apply text-white;
+}
+.image {
+	@apply h-full w-full object-cover object-center;
+}
