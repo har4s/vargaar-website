@@ -1,1 +1,1 @@
-export { SocialMediaSection } from "./social-media-section"
+export { SocialMediaSection } from "./social-media-section";

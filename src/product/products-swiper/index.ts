@@ -1,1 +1,1 @@
-export { ProductsSwiper } from "./products-swiper"
+export { ProductsSwiper } from "./products-swiper";

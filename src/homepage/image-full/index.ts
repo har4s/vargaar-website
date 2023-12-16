@@ -1,1 +1,1 @@
-export { ImageFull } from "./image-full"
+export { ImageFull } from "./image-full";

@@ -1,1 +1,1 @@
-export { TxtSection } from "./txt-section"
+export { TxtSection } from "./txt-section";

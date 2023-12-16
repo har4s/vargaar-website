@@ -3,9 +3,9 @@
 // import { cn } from 'lib/utils';
 
 interface Props {
-    className?: string;
+	className?: string;
 }
 
-export const MegaMenu: React.FC<Props> = ({ }) => {
-    return null;
-}
+export const MegaMenu: React.FC<Props> = ({}) => {
+	return null;
+};

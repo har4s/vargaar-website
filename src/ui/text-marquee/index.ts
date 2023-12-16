@@ -1,1 +1,1 @@
-export { TextMarquee } from "./text-marquee"
+export { TextMarquee } from "./text-marquee";

@@ -1,1 +1,1 @@
-export { WknSwiper } from "./wkn-swiper"
+export { WknSwiper } from "./wkn-swiper";

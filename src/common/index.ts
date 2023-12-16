@@ -1,2 +1,2 @@
-export { SocialMediaSection } from "./social-media-section"
-export { Newsletter } from "./newsletter"
+export { SocialMediaSection } from "./social-media-section";
+export { Newsletter } from "./newsletter";
