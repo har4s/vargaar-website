@@ -15,14 +15,14 @@ export const ProductCard: React.FC<Props> = ({ className }) => {
 	return (
 		<article className={cn(s.root, className)}>
 			<div className={cn(s.container)}>
-				<Link href="#">
+				<Link href="/product/test-1/">
 					<div className={s.thumbnailContainer}>
 						<Image className={s.thumbnail} src="/bio-nature-0x600-c-default.png" alt="" fill />
 					</div>
 				</Link>
 				<div className={s.details}>
 					<h3 className={s.name}>
-						<Link href="#">میکس قهوه 70/30 عربیکا</Link>
+						<Link href="/product/test-1/">میکس قهوه 70/30 عربیکا</Link>
 					</h3>
 					<Price amount="1000000" className={s.price} />
 				</div>

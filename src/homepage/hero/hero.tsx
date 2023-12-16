@@ -49,9 +49,9 @@ export const Hero: React.FC<Props> = ({ className }) => {
 		const currentIndexWrapper = gsap.utils.wrap(0, lines.length);
 		let currentIndex = currentIndexWrapper(0);
 		const updateCurrentLine = () => {
-			lines[currentIndex].classList.remove("active");
+			// lines[currentIndex].classList.remove("active");
 			currentIndex = currentIndexWrapper(currentIndex + 1);
-			lines[currentIndex].classList.add("active");
+			// lines[currentIndex].classList.add("active");
 		};
 
 		// Init Lines

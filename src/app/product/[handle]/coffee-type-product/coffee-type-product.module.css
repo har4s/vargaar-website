@@ -1,0 +1,89 @@
+.root {
+	@apply relative;
+}
+.wrapper {
+	@apply relative;
+}
+.hero {
+	@apply relative;
+	@apply bg-[#dce2d1];
+	@apply pb-20 pt-36 lg:pb-[5.5555555556dvw] lg:pt-[12.5dvw];
+	@screen lg {
+		@apply min-h-[52.7777777778dvw];
+		@apply flex flex-row items-center justify-center;
+	}
+	& .Container {
+		@apply container;
+		@apply flex flex-col;
+		@apply gap-y-8;
+		@screen lg {
+			@apply w-full flex-row justify-between;
+			@apply gap-[27.7777777778dvw];
+			@apply static;
+		}
+	}
+	& .headline {
+		@apply flex w-full flex-col;
+		@apply gap-y-10 lg:gap-y-[2.0833333333dvw];
+
+		& .title {
+			@apply text-center lg:text-end;
+			@apply text-secondary-700;
+			@apply font-display font-black;
+			@apply text-4xl lg:text-[3.4722222222dvw];
+			line-height: 1;
+		}
+		& .labels {
+			@apply flex w-full flex-row items-center justify-center lg:justify-end;
+			@apply gap-x-5;
+		}
+	}
+
+	& .details {
+		@apply flex w-full flex-col;
+		@apply gap-y-5;
+	}
+	& .price {
+		@apply text-center lg:text-start;
+		@apply text-primary;
+		@apply text-2xl lg:text-[2.0833333333dvw];
+		@apply font-black;
+		line-height: 1.4;
+	}
+	& .pose {
+		@apply text-center lg:text-start;
+		@apply text-secondary-700;
+		@apply text-base lg:text-[1.0833333333dvw];
+		@apply font-normal;
+		line-height: 1.4;
+	}
+
+	& .imageContainer {
+		@apply relative;
+		@apply mx-auto;
+		max-width: 320px;
+		width: 80%;
+	}
+
+	@screen lg {
+		& .imageContainer {
+			@apply absolute left-[50%] top-[55%];
+			@apply -translate-x-[50%] -translate-y-[50%];
+			width: 30.5dvw;
+			max-width: 30.5dvw;
+		}
+	}
+
+	& .image {
+		@apply h-full w-full object-contain object-center;
+	}
+	& .actions {
+		@apply flex w-full flex-row items-center justify-center lg:justify-start;
+	}
+
+	& .actions .button {
+	}
+}
+.description {
+	@apply w-full;
+}

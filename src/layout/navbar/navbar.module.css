@@ -1,11 +1,11 @@
 .root {
 	@apply fixed left-0 top-0 z-30 w-full;
 	@apply transform transition-all duration-500;
-	@apply bg-white;
+	@apply p-[1.7361111111dvw];
 }
 
 .root.hidden {
-	@apply -translate-y-full;
+	@apply -translate-y-[200%];
 }
 
 .root.scrolled {
@@ -13,7 +13,9 @@
 }
 
 .Container {
-	@apply container flex flex-row items-center justify-between py-3;
+	@apply rounded-lg bg-white;
+	@apply px-4 py-4 lg:px-8;
+	@apply flex flex-row items-center justify-between;
 }
 .logoContainer {
 	@apply inline-flex w-full justify-center;
@@ -35,7 +37,7 @@
 	@apply flex items-center;
 }
 .navLink span {
-	@apply text-base font-medium text-secondary-800;
+	@apply text-lg font-semibold text-secondary-800;
 }
 .navItem:hover .navLink span {
 	@apply text-corn;

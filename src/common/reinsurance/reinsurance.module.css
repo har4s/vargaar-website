@@ -1,0 +1,34 @@
+.root {
+	@apply relative bg-white py-12 lg:py-32;
+}
+
+.Container {
+	@apply container;
+	@apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4;
+	@apply gap-5;
+}
+
+.item {
+	@apply flex flex-col items-center justify-center;
+	@apply gap-y-3;
+}
+
+.iconContainer {
+}
+
+.icon {
+}
+
+.title {
+	@apply text-center;
+	@apply font-display text-2xl font-semibold lg:text-[1.3888888889dvw];
+	@apply text-secondary-800;
+	line-height: 1.4;
+}
+
+.subtitle {
+	@apply text-center;
+	@apply text-base font-semibold lg:text-[0.8888888889dvw];
+	@apply text-gray-700;
+	line-height: 1.4;
+}
