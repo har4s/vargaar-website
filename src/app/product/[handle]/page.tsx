@@ -8,7 +8,7 @@ import { Button } from "ui";
 
 export const runtime = "edge";
 
-export default async function ProductPage({ }: { params: { handle: string } }) {
+export default async function ProductPage({}: { params: { handle: string } }) {
 	return (
 		<>
 			<CoffeeTypeProduct />
@@ -18,7 +18,7 @@ export default async function ProductPage({ }: { params: { handle: string } }) {
 	);
 }
 
-const PageReference: React.FC<{}> = ({ }) => {
+const PageReference: React.FC<{}> = ({}) => {
 	return (
 		<div className={cn(s.pageRef)}>
 			<div className={s.Container}>
@@ -53,7 +53,7 @@ const PageReference: React.FC<{}> = ({ }) => {
 	);
 };
 
-const RelatedProducts: React.FC<{}> = ({ }) => {
+const RelatedProducts: React.FC<{}> = ({}) => {
 	return (
 		<section className={cn(s.relatedProducts)}>
 			<div className={cn(s.Container)}>
