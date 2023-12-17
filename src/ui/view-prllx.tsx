@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { usePathname } from "next/navigation";
+
 interface Props {
 	children?: React.ReactNode;
 }
@@ -13,8 +15,9 @@ type PrllxElement = Element & {
 };
 
 export const ViewPrllx: React.FC<Props> = ({ children }) => {
+	const pathname = usePathname()
 	const container = useRef<HTMLDivElement>(null);
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const elems = (container && container.current?.querySelectorAll("[data-prllxfrom]"))!;
 		// Create PrllxElement
 		elems.forEach((el) => {
@@ -57,6 +60,6 @@ export const ViewPrllx: React.FC<Props> = ({ children }) => {
 				element.tl?.kill();
 			});
 		};
-	}, []);
+	}, [pathname]);
 	return <div ref={container}>{children}</div>;
 };
