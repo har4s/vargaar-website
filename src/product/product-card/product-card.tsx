@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { ShoppingBagIcon } from "lucide-react";
 import s from "./product-card.module.css";
 import { cn } from "lib/utils";
 import type { Product } from "lib/types";
@@ -25,8 +26,14 @@ export const ProductCard: React.FC<Props> = ({ className }) => {
 						<Link href="/product/test-1/">میکس قهوه 70/30 عربیکا</Link>
 					</h3>
 					<Price amount="1000000" className={s.price} />
+					<div className={s.link}>
+						<Link href="/product/test-1/">مشاهده محصول</Link>
+					</div>
 				</div>
 			</div>
+			<Link className={s.btn} href="/product/test-1/">
+				<ShoppingBagIcon className={s.icon} />
+			</Link>
 		</article>
 	);
 };
