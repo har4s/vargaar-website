@@ -44,7 +44,7 @@ const Child: React.FC<{
 			props: {
 				...child.props,
 				// eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-				className: cn(child.props.className, s.innerSlide),
+				className: cn(s.innerSlide, child.props.className),
 			},
 		};
 	}

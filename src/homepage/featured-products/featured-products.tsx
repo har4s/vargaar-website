@@ -25,8 +25,8 @@ export const FeaturedProducts: React.FC<Props> = ({ className }) => {
 					<ProductsSwiper className={cn(s.slider)}>
 						{
 							// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-							[...Array(10)].map((_, idx) => (
-								<ProductCard key={idx} product={{}} />
+							[...Array(7)].map((_, idx) => (
+								<ProductCard className={s.product} key={idx} product={{}} />
 							))
 						}
 					</ProductsSwiper>

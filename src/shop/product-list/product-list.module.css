@@ -1,0 +1,36 @@
+.root {
+	@apply bg-[#faf9f7];
+	@apply py-12;
+}
+.Container {
+	@apply container;
+	@apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4;
+	@apply gap-5;
+}
+.product {
+	@apply w-full;
+}
+
+.product:nth-child(2) {
+	@apply !bg-[#DFABA8];
+}
+
+.product:nth-child(3) {
+	@apply !bg-[#FFD799];
+}
+
+.product:nth-child(4) {
+	@apply !bg-[#EAF3B8];
+}
+
+.product:nth-child(6) {
+	@apply !bg-[#DCE2D1];
+}
+
+.product:nth-child(5) {
+	@apply !bg-[#F4EBD9];
+}
+
+.product:nth-child(6) {
+	@apply !bg-[#CED8E4];
+}

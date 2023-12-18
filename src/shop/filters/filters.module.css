@@ -1,0 +1,34 @@
+.root {
+	@apply z-20;
+	@apply sticky;
+	@apply left-0 top-0 w-full;
+	@apply bg-white;
+}
+.Container {
+	@apply container;
+	@apply py-8;
+}
+.list {
+	@apply flex flex-row items-center justify-start lg:justify-center;
+	@apply gap-x-10;
+	@apply overflow-x-scroll;
+	@apply w-full flex-nowrap;
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+.item {
+	@apply inline-flex items-center justify-center;
+}
+
+.link {
+	@apply text-lg font-semibold;
+	@apply text-[#dbab00];
+	@apply relative;
+	@apply whitespace-nowrap;
+}
+
+.item:nth-child(1) .link {
+	@apply text-primary;
+}

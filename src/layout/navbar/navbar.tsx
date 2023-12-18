@@ -50,7 +50,7 @@ export const Navbar: React.FC<Props> = ({ className }) => {
 				<div className={cn("w-full lg:hidden")}>{/* <MegaMenu /> */}</div>
 				<ul className={cn(s.row, s.nav)}>
 					<li className={cn(s.navItem)}>
-						<Link href="#" className={cn(s.navLink)}>
+						<Link href="/shop/" className={cn(s.navLink)}>
 							<span>محصولات ورگار</span>
 							<span className={s.arrow}>
 								<ChevronDownIcon />

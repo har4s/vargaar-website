@@ -1,0 +1,1 @@
+export { IntroTxt } from "./intro-txt"

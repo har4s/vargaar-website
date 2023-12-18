@@ -21,6 +21,7 @@
 		"next": "14.0.4",
 		"react": "^18",
 		"react-dom": "^18",
+		"react-laag": "2.0.5",
 		"react-merge-refs": "2.1.1",
 		"swiper": "11.0.5",
 		"tailwind-merge": "^2.1.0"

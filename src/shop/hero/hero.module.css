@@ -1,0 +1,26 @@
+.root {
+	@apply bg-primary;
+	@apply py-12 pt-28 lg:py-[6.66444dvw] lg:pt-[12.2222dvw];
+}
+
+.Container {
+	@apply container;
+	@apply flex flex-col gap-y-8;
+}
+
+.title {
+	@apply mx-auto max-w-2xl;
+	@apply text-center;
+	@apply font-display font-bold;
+	@apply text-5xl lg:text-[3.4722222222dvw];
+	@apply text-white;
+	line-height: 1;
+}
+
+.subtitle {
+	@apply mx-auto max-w-2xl;
+	@apply text-center;
+	@apply text-lg lg:text-[1.1111111111vw];
+	@apply text-white;
+	line-height: 1.3;
+}
