@@ -1,20 +1,20 @@
 .root {
-	@apply container py-20 lg:py-32;
+	@apply container py-24 lg:py-32;
 	@apply bg-white;
 }
 .Container {
 	@apply flex flex-col lg:flex-row;
 }
 .imageContainer {
-	@apply flex w-full basis-2/5 flex-col;
+	@apply flex w-full basis-5/12 flex-col;
 	@apply relative overflow-hidden;
 }
 .image {
 	@apply h-full w-full object-cover object-center;
 }
 .text {
-	@apply flex w-full basis-3/5 flex-col;
-	@apply lg:py-14 lg:pl-[10dvw];
+	@apply flex w-full basis-7/12 flex-col;
+	@apply lg:py-20 lg:pl-[10dvw];
 	@apply mb-14 lg:mb-0;
 	@apply gap-y-5 lg:gap-y-[2dvw];
 }
@@ -24,14 +24,18 @@
 	@apply mb-3 lg:mb-[1dvw];
 	line-height: 1;
 }
+.block {
+	@apply flex flex-col;
+	@apply gap-y-2 lg:gap-y-[0.8dvw];
+}
 .subtitle {
 	@apply text-secondary-800;
-	@apply font-body text-xl font-semibold lg:text-[1.8dvw];
+	@apply font-body text-xl font-medium lg:text-[1.8dvw];
 	line-height: 1.4;
 }
 .content {
 	@apply text-secondary-700;
-	@apply font-body text-lg font-normal lg:text-[1.3dvw];
+	@apply font-body text-xl font-medium lg:text-[1.4dvw];
 	line-height: 1.4;
 }
 .actions {

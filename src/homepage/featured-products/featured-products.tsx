@@ -15,11 +15,11 @@ export const FeaturedProducts: React.FC<Props> = ({ className }) => {
 					<h2 className={s.title}>
 						<strong>محصولات پیشنهادی این هفته ورگار</strong>
 					</h2>
-					<p className={s.subtitle}>
+					{/* <p className={s.subtitle}>
 						برای 165 سال، Chicorée Leroux به لطف دانش منحصر به فرد، محصولات با کیفیت را به شما ارائه می دهد.
 						طیف وسیعی از محصولات ما را کشف کنید. برای هر سلیقه ای چیزی وجود دارد! محلول، دانه، مایع، هر چه
 						استفاده کنید، کاسنی را خواهید یافت که برای شما ساخته شده است.
-					</p>
+					</p> */}
 				</div>
 				<div className={s.sliderContainer}>
 					<ProductsSwiper className={cn(s.slider)}>

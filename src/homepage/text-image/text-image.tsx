@@ -13,15 +13,17 @@ export const TextImage: React.FC<Props> = ({ className }) => {
 			<div className={s.Container}>
 				<div className={s.text}>
 					<h2 className={s.title}>اما در واقع آن چیست؟</h2>
-					<span className={s.subtitle}>
-						کاسنی لرو یک محصول طبیعی، تاریخی و سالم است. نوشیدنی ساخته شده از ریشه کاسنی بوداده و به طور طبیعی
-						بدون کافئین.
-					</span>
-					<div className={s.content}>
-						<p>
-							نسل‌ها در فرانسه وجود داشته است و هنوز در قلب خانه‌های فرانسوی است. بدون هیچ محرکی در هر زمانی
-							از روز توسط پیر و جوان مصرف می شود.
-						</p>
+					<div className={s.block}>
+						<span className={s.subtitle}>
+							کاسنی لرو یک محصول طبیعی، تاریخی و سالم است. نوشیدنی ساخته شده از ریشه کاسنی بوداده و به طور
+							طبیعی بدون کافئین.
+						</span>
+						<div className={s.content}>
+							<p>
+								نسل‌ها در فرانسه وجود داشته است و هنوز در قلب خانه‌های فرانسوی است. بدون هیچ محرکی در هر زمانی
+								از روز توسط پیر و جوان مصرف می شود.
+							</p>
+						</div>
 					</div>
 					<div className={s.actions}>
 						<Button>قهوه خودتو پیدا کن</Button>

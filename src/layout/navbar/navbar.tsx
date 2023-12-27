@@ -48,6 +48,11 @@ export const Navbar: React.FC<Props> = ({ className }) => {
 		<div className={cn(s.root, { [s.hidden]: !visible }, className)}>
 			<div className={s.Container}>
 				<div className={cn("w-full lg:hidden")}>{/* <MegaMenu /> */}</div>
+				<div className={cn(s.start, s.logoContainer)}>
+					<Link href="/">
+						<Logo className={s.logo} />
+					</Link>
+				</div>
 				<ul className={cn(s.row, s.nav)}>
 					<li className={cn(s.navItem)}>
 						<Link href="/shop/" className={cn(s.navLink)}>
@@ -58,7 +63,7 @@ export const Navbar: React.FC<Props> = ({ className }) => {
 						</Link>
 					</li>
 				</ul>
-				<div className={cn(s.logoContainer)}>
+				<div className={cn(s.middle, s.logoContainer)}>
 					<Link href="/">
 						<Logo className={s.logo} />
 					</Link>

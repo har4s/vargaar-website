@@ -9,7 +9,7 @@
 }
 
 .heading {
-	@apply flex flex-col lg:flex-row lg:items-center lg:justify-between;
+	@apply flex flex-col lg:flex-row lg:items-start lg:justify-between;
 	@apply mb-10 lg:mb-[4.1666666667dvw];
 	@apply gap-y-5;
 }
@@ -29,7 +29,7 @@
 	@apply w-full lg:max-w-[41.6666666667dvw];
 	@apply text-lg font-semibold lg:text-[1.2dvw];
 	@apply text-secondary-600;
-	line-height: 1.4;
+	line-height: 1.6;
 }
 
 .sliderContainer {

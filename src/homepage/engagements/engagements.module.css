@@ -1,0 +1,16 @@
+.root {
+	@apply relative py-20 lg:py-32;
+}
+.Container {
+	@apply container;
+}
+
+.title {
+	@apply font-display text-xl font-bold;
+	@apply lg:max-w-[39.5833333333vw];
+	@screen lg {
+		font-size: 4.1666666667vw;
+		margin-bottom: 4.1666666667vw;
+		line-height: 1;
+	}
+}

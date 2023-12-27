@@ -12,7 +12,7 @@ const config: Config = {
 		},
 		fontFamily: {
 			display: "var(--gofteh-heavy)",
-			body: ["var(--abar-pro)", "var(--yekan-bakh)"],
+			body: ["var(--yekan-bakh)"],
 		},
 		extend: {
 			colors: {

@@ -12,8 +12,8 @@ interface Props {
 export const ProductsSwiper: React.FC<Props> = ({ className, children }) => {
 	return (
 		<WknSwiper
-			slidesPerView="auto"
 			spaceBetween={20}
+			slidesPerView={1.1}
 			breakpoints={{
 				768: {
 					slidesPerView: 2,

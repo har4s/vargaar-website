@@ -4,7 +4,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import s from "./hero.module.css";
-import { cn, getChildIndex } from "lib/utils";
+import { cn } from "lib/utils";
 
 interface Props {
 	className?: string;
@@ -46,13 +46,13 @@ export const Hero: React.FC<Props> = ({ className }) => {
 		const lineheight = lines[0].offsetHeight;
 
 		// CurrentIndex
-		const currentIndexWrapper = gsap.utils.wrap(0, lines.length);
-		let currentIndex = currentIndexWrapper(0);
-		const updateCurrentLine = () => {
-			// lines[currentIndex].classList.remove("active");
-			currentIndex = currentIndexWrapper(currentIndex + 1);
-			// lines[currentIndex].classList.add("active");
-		};
+		// const currentIndexWrapper = gsap.utils.wrap(0, lines.length);
+		// let currentIndex = currentIndexWrapper(0);
+		// const updateCurrentLine = () => {
+		// 	lines[currentIndex].classList.remove("active");
+		// 	currentIndex = currentIndexWrapper(currentIndex + 1);
+		// 	lines[currentIndex].classList.add("active");
+		// };
 
 		// Init Lines
 		gsap.set(lines, { y: (index) => index * lineheight });
@@ -67,20 +67,20 @@ export const Hero: React.FC<Props> = ({ className }) => {
 
 		heroTL.to(lines, {
 			// y: `-=${lineheight}`,
-			modifiers: {
-				y(value: number, target: HTMLSpanElement) {
-					const idx = getChildIndex(target);
-					const currentY = (idx + 1 * -currentIndex) * lineheight;
-					const nextY = currentY + lineheight;
-					const y = gsap.utils.unitize(gsap.utils.wrap(currentY, nextY));
-					return y(value);
-				},
-			},
+			// modifiers: {
+			// 	y(value: number, target: HTMLSpanElement) {
+			// 		const idx = getChildIndex(target);
+			// 		const currentY = (idx + 1 * -currentIndex) * lineheight;
+			// 		const nextY = currentY + lineheight;
+			// 		const y = gsap.utils.unitize(gsap.utils.wrap(currentY, nextY));
+			// 		return y(value);
+			// 	},
+			// },
 			repeat: -1,
 			repeatDelay: 1.4,
 			repeatRefresh: true,
-			onStart: updateCurrentLine,
-			onRepeat: updateCurrentLine,
+			// onStart: updateCurrentLine,
+			// onRepeat: updateCurrentLine,
 		});
 		return () => {
 			heroST.kill();
@@ -99,8 +99,8 @@ export const Hero: React.FC<Props> = ({ className }) => {
 						<span>انرژی مثبت</span>
 						<span>حس خوب</span>
 						<span>مقدار کافئین</span>
-						{/* <span>انرژی مثبت</span>
-                        <span>حس خوب</span> */}
+						<span>انرژی مثبت</span>
+						<span>حس خوب</span>
 					</span>
 				</h1>
 				<div className={s.images}>
