@@ -6,8 +6,9 @@
 	body {
 		@apply relative bg-white;
 	}
+
 	body {
-		@apply font-body text-base font-normal text-gray-600;
+		@apply text-text-color font-body text-base font-normal;
 	}
 
 	html .lines span.active {

@@ -1,0 +1,66 @@
+fragment Checkout on Checkout {
+	id
+	email
+	totalPrice {
+		gross {
+			currency
+			amount
+		}
+	}
+	subtotalPrice {
+		gross {
+			currency
+			amount
+		}
+	}
+	shippingAddress {
+		firstName
+		lastName
+		phone
+		country {
+			code
+			country
+		}
+		cityArea
+		city
+		postalCode
+		streetAddress1
+		streetAddress2
+		isDefaultShippingAddress
+	}
+	shippingPrice {
+		gross {
+			currency
+			amount
+		}
+	}
+	availablePaymentGateways {
+		...PaymentGateway
+	}
+	storedPaymentMethods {
+		id
+		data
+		gateway {
+			...PaymentGateway
+		}
+	}
+	shippingMethods {
+		...ShippingMethod
+	}
+	deliveryMethod {
+		... on ShippingMethod {
+			...ShippingMethod
+		}
+	}
+	quantity
+	lines {
+		id
+		quantity
+		variant {
+			...Variant
+			product {
+				...ProductDetails
+			}
+		}
+	}
+}

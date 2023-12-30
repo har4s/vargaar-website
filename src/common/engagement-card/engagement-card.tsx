@@ -1,53 +1,33 @@
 import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import s from "./engagement-card.module.css";
+import { cn } from "lib/utils";
 
-interface Props {}
+interface Props {
+	className?: string;
+}
 
-export const EngagementCard: React.FC<Props> = () => {
+export const EngagementCard: React.FC<Props> = ({ className }) => {
 	return (
-		<article className="engagement__card --bienfaits">
-			<a href="https://www.leroux.fr/nos-engagements/bienfaits/">
-				<div className="article__background">
-					<div className="visual__container">
-						<picture className="visual">
-							<source
-								data-srcset="https://www.leroux.fr/wp-content/uploads/2023/04/img3-860x1120-c-default.webp 100w"
-								type="image/webp"
-								srcSet="https://www.leroux.fr/wp-content/uploads/2023/04/img3-860x1120-c-default.webp 100w"
-							/>
-							<img
-								className="img-fluid ls-is-cached lazyloaded"
-								data-src="https://www.leroux.fr/wp-content/uploads/2023/04/img3-860x1120-c-default.jpg"
-								alt=""
-								src="https://www.leroux.fr/wp-content/uploads/2023/04/img3-860x1120-c-default.jpg"
-							/>
-						</picture>
+		<article className={cn(s.root, className)}>
+			<Link href="#">
+				<div className={s.background}>
+					<div className={s.bgImageContainer}>
+						<Image className={s.bgImg} src="" alt="" />
 					</div>
 				</div>
-				<div className="article__content">
-					<div className="visual__container">
-						<picture className="visual">
-							<source
-								data-srcset="https://www.leroux.fr/wp-content/uploads/2023/04/icon-nature.svg 100w"
-								type="image/webp"
-								srcSet="https://www.leroux.fr/wp-content/uploads/2023/04/icon-nature.svg 100w"
-							/>
-							<img
-								className="img-fluid lazyloaded"
-								data-src="https://www.leroux.fr/wp-content/uploads/2023/04/icon-nature.svg"
-								alt=""
-								src="https://www.leroux.fr/wp-content/uploads/2023/04/icon-nature.svg"
-							/>
-						</picture>
-					</div>
+				<div className={s.content}>
+					<div className={s.iconContainer}></div>
 					<div>
-						<span className="title">Des bienfaits naturels au quotidien</span>
+						<span className={s.title}>Des bienfaits naturels au quotidien</span>
 						<p>
 							En effet, naturellement sans caféine et d’origine végétale, elle ne vous apporte que des bonnes
 							choses : des fibres, peu de calories et pour couronner le tout, une bonne hydratation du corps !
 							Vous pouvez donc la consommer sans modération tout au long de votre journée. Matin, midi et
 							soir. Idéale aussi à emporter dans un thermos au travail !
 						</p>
-						<div className="Link">
+						<div className={s.link}>
 							<span className="Link__txt">En savoir plus</span>
 							<div className="Link__arrow">
 								<svg
@@ -64,7 +44,7 @@ export const EngagementCard: React.FC<Props> = () => {
 						</div>
 					</div>
 				</div>
-			</a>
+			</Link>
 		</article>
 	);
 };

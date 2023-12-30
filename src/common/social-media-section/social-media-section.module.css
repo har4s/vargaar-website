@@ -1,5 +1,5 @@
 .root {
-	@apply relative overflow-hidden bg-[#F7F4ED] py-12 lg:py-32;
+	@apply bg-beige relative overflow-hidden py-12 lg:py-32;
 }
 
 .Container {
@@ -25,12 +25,12 @@
 
 .title {
 	@apply font-display text-3xl font-bold lg:text-[3.0555555556dvw];
-	@apply text-secondary;
+	@apply text-title;
 	line-height: 1.2;
 }
 .title strong {
 	@apply block w-full;
-	@apply text-[#DBAB00];
+	@apply text-bronze;
 	@apply invisible;
 	@apply h-0;
 }
@@ -41,12 +41,12 @@
 
 .icons div {
 	@apply rounded-full p-3;
-	@apply border border-secondary;
+	@apply border-brun border;
 }
 
 .icons a svg {
 	@apply h-6 w-6;
-	@apply text-secondary;
+	@apply text-brun;
 }
 
 .imageContainer {

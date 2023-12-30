@@ -24,11 +24,11 @@
 
 .link {
 	@apply text-lg font-semibold;
-	@apply text-[#dbab00];
+	@apply text-bronze;
 	@apply relative;
 	@apply whitespace-nowrap;
 }
 
-.item:nth-child(1) .link {
-	@apply text-primary;
+.item .link.active {
+	@apply text-rouge;
 }

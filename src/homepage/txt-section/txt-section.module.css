@@ -9,14 +9,14 @@
 .title {
 	@apply max-w-screen-2xl;
 	@apply text-center font-display text-5xl font-black lg:text-[5.5555555556dvw];
-	@apply text-primary;
+	@apply text-rouge;
 	line-height: 1.2;
 }
 
 .subtitle {
 	@apply max-w-screen-lg;
 	@apply text-center text-lg font-medium lg:text-[1.333332dvw];
-	@apply text-secondary-700;
+	@apply text-title;
 	line-height: 1.4;
 }
 .actions {

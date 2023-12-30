@@ -1,0 +1,11 @@
+fragment ShippingMethod on ShippingMethod {
+	id
+	name
+	description
+	price {
+		currency
+		amount
+	}
+	active
+	icon: metafield(key: "ui.icon")
+}

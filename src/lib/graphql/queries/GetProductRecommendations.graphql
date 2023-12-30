@@ -1,0 +1,9 @@
+query GetProductRecommendations {
+	products(first: 10, channel: "default-channel") {
+		edges {
+			node {
+				...ProductDetails
+			}
+		}
+	}
+}

@@ -22,13 +22,13 @@
 .title {
 	@apply text-center;
 	@apply font-display text-2xl font-semibold lg:text-[1.3888888889dvw];
-	@apply text-secondary-800;
+	@apply text-title;
 	line-height: 1.4;
 }
 
 .subtitle {
 	@apply text-center;
 	@apply text-base font-semibold lg:text-[0.8888888889dvw];
-	@apply text-gray-700;
+	@apply text-text-color;
 	line-height: 1.4;
 }

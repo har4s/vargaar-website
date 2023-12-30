@@ -1,7 +1,7 @@
 .root {
 	@apply overflow-hidden;
 	@apply relative py-10 lg:py-32;
-	@apply bg-primary;
+	@apply bg-rouge;
 }
 .Container {
 	@apply container flex flex-col items-center justify-center;
@@ -22,7 +22,7 @@
 }
 .title strong {
 	line-height: 1.4;
-	@apply text-secondary;
+	@apply text-brun;
 }
 
 .images {

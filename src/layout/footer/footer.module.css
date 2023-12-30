@@ -1,5 +1,5 @@
 .root {
-	@apply relative bg-[#F7F4ED];
+	@apply bg-beige relative;
 	@apply pb-3 pt-20;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .logo {
-	@apply h-24 w-auto text-primary;
+	@apply text-rouge h-24 w-auto;
 }
 
 .nav {
@@ -35,8 +35,9 @@
 }
 
 .itemTitle {
-	@apply text-sm font-bold text-[#dbab00] lg:text-[.8638888889dvw];
+	@apply text-bronze text-sm font-bold lg:text-[.8638888889dvw];
 }
+
 .children {
 	@apply flex flex-col items-center justify-center;
 	@apply gap-y-2;
@@ -46,10 +47,11 @@
 }
 
 .link {
-	@apply text-secondary-800;
 	@apply text-base font-medium lg:text-[1.0538888889dvw];
+	@apply text-links-color;
+	@apply font-yekan;
 }
 
 .copyright {
-	@apply text-center text-sm text-secondary-800 lg:text-[.82222dvw];
+	@apply text-text-color text-center text-sm lg:text-[.82222dvw];
 }

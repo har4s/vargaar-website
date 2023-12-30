@@ -4,11 +4,13 @@
 	@apply mt-5 gap-x-3;
 	@apply flex w-full flex-row items-center justify-end;
 }
+
 .navigation .btn {
-	@apply rounded-full bg-[#F7F4ED] p-5;
+	@apply bg-beige rounded-full p-5;
 }
+
 .arrow {
-	@apply text-secondary-700;
+	@apply text-title;
 }
 .arrow svg {
 	@apply h-6 w-6;

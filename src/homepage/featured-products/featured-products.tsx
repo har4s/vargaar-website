@@ -2,18 +2,26 @@ import React from "react";
 import s from "./featured-products.module.css";
 import { cn } from "lib/utils";
 import { ProductCard, ProductsSwiper } from "product";
+import { getCollection, getCollectionProducts } from "lib/saleor";
 
 interface Props {
 	className?: string;
 }
 
-export const FeaturedProducts: React.FC<Props> = ({ className }) => {
+export const FeaturedProducts: React.FC<Props> = async ({ className }) => {
+	const collection = await getCollection("hidden-homepage-featured-items");
+	if (!collection) return null;
+	const products = await getCollectionProducts({
+		collection: collection.handle,
+	});
+	if (products.length < 1) return null;
+
 	return (
 		<section className={cn(s.root, className)}>
 			<div className={cn(s.Container)}>
 				<div className={s.heading}>
 					<h2 className={s.title}>
-						<strong>محصولات پیشنهادی این هفته ورگار</strong>
+						<strong>{collection.title}</strong>
 					</h2>
 					{/* <p className={s.subtitle}>
 						برای 165 سال، Chicorée Leroux به لطف دانش منحصر به فرد، محصولات با کیفیت را به شما ارائه می دهد.
@@ -23,12 +31,9 @@ export const FeaturedProducts: React.FC<Props> = ({ className }) => {
 				</div>
 				<div className={s.sliderContainer}>
 					<ProductsSwiper className={cn(s.slider)}>
-						{
-							// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-							[...Array(7)].map((_, idx) => (
-								<ProductCard className={s.product} key={idx} product={{}} />
-							))
-						}
+						{products.map((product, idx) => (
+							<ProductCard className={s.product} key={idx} product={product} />
+						))}
 					</ProductsSwiper>
 				</div>
 			</div>

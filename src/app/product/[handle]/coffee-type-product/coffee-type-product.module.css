@@ -6,7 +6,6 @@
 }
 .hero {
 	@apply relative;
-	@apply bg-[#dce2d1];
 	@apply pb-20 pt-36 lg:pb-[5.5555555556dvw] lg:pt-[12.5dvw];
 	@screen lg {
 		@apply min-h-[52.7777777778dvw];
@@ -28,7 +27,7 @@
 
 		& .title {
 			@apply text-center lg:text-end;
-			@apply text-secondary-700;
+			@apply text-title;
 			@apply font-display font-black;
 			@apply text-4xl lg:text-[3.4722222222dvw];
 			line-height: 1;
@@ -45,16 +44,16 @@
 	}
 	& .price {
 		@apply text-center lg:text-start;
-		@apply text-primary;
+		@apply text-rouge;
 		@apply text-2xl lg:text-[2.0833333333dvw];
 		@apply font-black;
 		line-height: 1.4;
 	}
 	& .pose {
 		@apply text-center lg:text-start;
-		@apply text-secondary-700;
 		@apply text-base lg:text-[1.0833333333dvw];
-		@apply font-normal;
+		@apply text-text-color;
+		@apply font-semibold;
 		line-height: 1.4;
 	}
 

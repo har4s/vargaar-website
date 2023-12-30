@@ -1,5 +1,5 @@
 .root {
-	@apply bg-primary;
+	@apply bg-rouge;
 	@apply py-12 pt-28 lg:py-[6.66444dvw] lg:pt-[12.2222dvw];
 }
 

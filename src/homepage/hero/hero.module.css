@@ -1,6 +1,6 @@
 .root {
 	@apply relative overflow-hidden;
-	@apply bg-accent;
+	@apply bg-jaune;
 	@apply pt-28 lg:pt-[16.6666666667vw];
 }
 
@@ -10,7 +10,7 @@
 
 .heading {
 	@apply relative;
-	@apply text-primary;
+	@apply text-rouge;
 	@apply font-display text-[9vw] font-black;
 	@apply whitespace-nowrap;
 	@apply text-center;

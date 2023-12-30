@@ -13,25 +13,18 @@
 }
 
 .Container {
+	@apply shadow-xl;
 	@apply rounded-lg bg-white;
 	@apply px-4 py-4 lg:px-8;
 	@apply flex flex-row items-center justify-between;
 }
+
 .logoContainer {
-}
-
-.start.logoContainer {
-	@apply hidden;
-	@apply lg:inline-flex lg:justify-start;
-}
-
-.middle.logoContainer {
 	@apply inline-flex w-full justify-center;
-	@apply lg:hidden;
 }
 
 .logo {
-	@apply h-10 w-auto text-primary lg:h-16;
+	@apply text-rouge h-10 w-auto lg:h-16;
 }
 
 .row {
@@ -42,7 +35,6 @@
 	@apply hidden;
 	@screen lg {
 		@apply flex flex-row;
-		@apply px-8;
 	}
 }
 
@@ -52,14 +44,15 @@
 	@apply flex items-center;
 }
 .navLink span {
-	@apply text-lg font-semibold text-secondary-800;
+	@apply font-yekan;
+	@apply text-links-color text-lg font-semibold;
 }
 .navItem:hover .navLink span {
-	@apply text-corn;
+	@apply text-bronze;
 }
 .arrow {
 	@apply mr-1 inline-flex;
 }
 .arrow svg {
-	@apply h-5 w-5 text-corn;
+	@apply text-bronze h-5 w-5;
 }

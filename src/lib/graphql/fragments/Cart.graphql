@@ -1,0 +1,26 @@
+fragment Cart on Checkout {
+	id
+	totalPrice {
+		gross {
+			currency
+			amount
+		}
+	}
+	subtotalPrice {
+		gross {
+			currency
+			amount
+		}
+	}
+	quantity
+	lines {
+		id
+		quantity
+		variant {
+			...Variant
+			product {
+				...ProductDetails
+			}
+		}
+	}
+}

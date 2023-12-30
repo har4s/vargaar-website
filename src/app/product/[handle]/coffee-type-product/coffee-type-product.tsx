@@ -5,28 +5,32 @@ import s from "./coffee-type-product.module.css";
 import { cn } from "lib/utils";
 import { Price } from "ui/price";
 import { Button } from "ui";
+import type { Product } from "lib/types";
 
 interface Props {
 	className?: string;
+	product: Product;
 }
 
-export const CoffeeTypeProduct: React.FC<Props> = ({ className }) => {
+export const CoffeeTypeProduct: React.FC<Props> = ({ className, product }) => {
 	return (
 		<article className={cn(s.root, className)}>
 			<div className={s.wrapper}>
-				<div className={s.hero}>
-					<div className={s.imageContainer}>
-						<Image
-							className={s.image}
-							src="/bio-nature-0x600-c-default.png"
-							alt=""
-							width={600}
-							height={600}
-						/>
-					</div>
+				<div className={s.hero} style={{ backgroundColor: product.bgColor }}>
+					{product.featuredImage && (
+						<div className={s.imageContainer}>
+							<Image
+								className={s.image}
+								src={product.featuredImage.url}
+								alt={product.featuredImage.altText}
+								width={600}
+								height={600}
+							/>
+						</div>
+					)}
 					<div className={s.Container}>
 						<div className={s.headline}>
-							<h1 className={s.title}>میکس قهوه 70/30 عربیکا</h1>
+							<h1 className={s.title}>{product.title}</h1>
 							<div className={s.labels}>
 								{labels.map((label, idx) => (
 									<label.icon key={idx} className={s.label} />
@@ -34,16 +38,22 @@ export const CoffeeTypeProduct: React.FC<Props> = ({ className }) => {
 							</div>
 						</div>
 						<div className={s.details}>
-							<Price className={s.price} amount="2500000" />
+							{product.availableForSale ? (
+								<Price amount={product.price} className={s.price} />
+							) : (
+								<span className={s.price}>ناموجود</span>
+							)}
 							<div className={s.pose}>
 								<p>
 									محصولی 100% گیاهی بدون قند افزوده*. این گیاه توسط کارخانه های کاشت ما در مناطق کاشت واقع در
 									Hauts-de-France، نزدیک به محل تولید ما، کشت شد.
 								</p>
 							</div>
-							<div className={s.actions}>
-								<Button className={s.button}>افزودن به سبد خرید</Button>
-							</div>
+							{product.availableForSale && (
+								<div className={s.actions}>
+									<Button className={s.button}>افزودن به سبد خرید</Button>
+								</div>
+							)}
 						</div>
 					</div>
 				</div>

@@ -1,6 +1,6 @@
 .root {
 	@apply relative;
-	@apply bg-[#f7f4ed];
+	@apply bg-beige;
 	@apply py-16 lg:py-32;
 }
 
@@ -19,14 +19,14 @@
 	@apply text-4xl lg:text-[2.5dvw];
 	@apply font-display font-black;
 	@apply lg:max-w-[37.5dvw];
-	@apply text-secondary-800;
+	@apply text-title;
 	line-height: 1;
 }
 
 .content {
 	@apply lg:max-w-[41.6666666667dvw];
 	& p {
-		@apply text-[#7d6557];
+		@apply text-text-color;
 		@apply font-normal;
 		@apply text-lg lg:text-[1.3888888889dvw];
 		line-height: 1.3;

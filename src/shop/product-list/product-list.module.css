@@ -1,5 +1,5 @@
 .root {
-	@apply bg-[#faf9f7];
+	@apply bg-beige-l;
 	@apply py-12;
 }
 .Container {
@@ -11,7 +11,7 @@
 	@apply w-full;
 }
 
-.product:nth-child(2) {
+/* .product:nth-child(2) {
 	@apply !bg-[#DFABA8];
 }
 
@@ -33,4 +33,4 @@
 
 .product:nth-child(6) {
 	@apply !bg-[#CED8E4];
-}
+} */

@@ -1,0 +1,4 @@
+fragment PaymentGateway on PaymentGateway {
+	id
+	name
+}

@@ -1,5 +1,5 @@
 import React from "react";
-import { FeaturedProducts, Hero, ImageFull, TextImage, TxtSection } from "homepage";
+import { Engagements, FeaturedProducts, Hero, ImageFull, TextImage } from "homepage";
 import { Footer, Navbar } from "layout";
 import { TextMarquee } from "ui";
 import { Newsletter, SocialMediaSection } from "common";
@@ -16,8 +16,8 @@ export default function Home() {
 				<ImageFull src="/chicoree-leroux-reconfort-2400x1200-c-default.jpg">
 					<TextMarquee className="absolute bottom-44 z-10">طیف وسیعی از محصولات ما را کشف کنید</TextMarquee>
 				</ImageFull>
-				<TxtSection />
-				<SocialMediaSection />
+				<Engagements />
+				{/* <SocialMediaSection /> */}
 				<Newsletter />
 			</div>
 			<Footer />

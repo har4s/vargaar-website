@@ -1,0 +1,14 @@
+mutation VerifyOTP($phoneNumber: String!, $publicToken: String!, $otp: String!) {
+	otpVerify(phoneNumber: $phoneNumber, publicToken: $publicToken, otp: $otp) {
+		user {
+			...User
+		}
+		token
+		refreshToken
+		csrfToken
+		errors {
+			field
+			message
+		}
+	}
+}

@@ -1,19 +1,24 @@
 import React from "react";
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import s from "./page.module.css";
 import { CoffeeTypeProduct } from "./coffee-type-product";
 import { cn } from "lib/utils";
 import { ProductCard, ProductsSwiper } from "product";
 import { Button } from "ui";
+import { getProduct, getProductRecommendations } from "lib/saleor";
 
 export const runtime = "edge";
 
-export default async function ProductPage({}: { params: { handle: string } }) {
+export default async function ProductPage({ params }: { params: { handle: string } }) {
+	const product = await getProduct(params.handle);
+	if (!product) return notFound();
+
 	return (
 		<>
-			<CoffeeTypeProduct />
+			<CoffeeTypeProduct product={product} />
 			<PageReference />
-			<RelatedProducts />
+			<RelatedProducts productId={product.id} />
 		</>
 	);
 }
@@ -53,7 +58,9 @@ const PageReference: React.FC<{}> = ({}) => {
 	);
 };
 
-const RelatedProducts: React.FC<{}> = ({}) => {
+const RelatedProducts: React.FC<{ productId: string }> = async ({ productId }) => {
+	const products = await getProductRecommendations(productId);
+
 	return (
 		<section className={cn(s.relatedProducts)}>
 			<div className={cn(s.Container)}>
@@ -67,8 +74,8 @@ const RelatedProducts: React.FC<{}> = ({}) => {
 					<ProductsSwiper className={cn(s.slider)}>
 						{
 							// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-							[...Array(10)].map((_, idx) => (
-								<ProductCard key={idx} product={{}} />
+							products.map((product, idx) => (
+								<ProductCard key={idx} product={product} />
 							))
 						}
 					</ProductsSwiper>

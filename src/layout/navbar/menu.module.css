@@ -1,0 +1,74 @@
+.root {
+	@apply -z-10;
+	@apply h-screen w-full max-w-xl;
+	@apply fixed bottom-0 left-0 right-0 top-0;
+	@apply bg-white;
+	@apply text-text-brown;
+	@apply hidden;
+
+	@screen lg {
+		@apply flex;
+		@apply z-0;
+		@apply h-auto w-full;
+		@apply relative;
+		@apply bg-transparent;
+	}
+}
+.inner {
+	@apply p-10 pt-36;
+	@apply mt-auto;
+	@apply flex flex-col justify-end;
+	@apply w-full;
+	@screen lg {
+		@apply mt-[unset] p-[unset] pt-[unset];
+		@apply flex-row items-center justify-start;
+	}
+}
+.main {
+	@apply w-full;
+	@apply flex flex-col;
+	@apply gap-[3.0833333333vw];
+	@screen lg {
+		@apply flex-row items-center justify-start;
+		@apply gap-[1.0833333333vw];
+	}
+}
+.item {
+	@apply relative;
+}
+.link {
+	@apply inline-block;
+	@apply font-display;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 1.2;
+	position: relative;
+
+	& span {
+		display: inline;
+	}
+	& .arrow {
+		@apply mr-1 inline-flex;
+		vertical-align: middle;
+		@apply rotate-90;
+	}
+	& .arrow .icon {
+		fill: none;
+		left: 0;
+		top: 0;
+		@apply h-5 w-5 text-bronze;
+	}
+
+	@screen lg {
+		@apply font-yekan;
+		@apply text-lg font-semibold;
+
+		& .arrow {
+			@apply rotate-0;
+		}
+	}
+}
+
+.item:hover .link span {
+	@apply text-bronze;
+}

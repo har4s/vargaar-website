@@ -1,0 +1,9 @@
+mutation UpdateUserInformation($firstName: String, $lastName: String) {
+	accountUpdate(input: { firstName: $firstName, lastName: $lastName }) {
+		errors {
+			message
+			field
+			code
+		}
+	}
+}

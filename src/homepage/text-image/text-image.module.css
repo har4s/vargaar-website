@@ -19,7 +19,7 @@
 	@apply gap-y-5 lg:gap-y-[2dvw];
 }
 .title {
-	@apply text-primary;
+	@apply text-rouge;
 	@apply font-display text-4xl font-black lg:text-[4dvw];
 	@apply mb-3 lg:mb-[1dvw];
 	line-height: 1;
@@ -29,13 +29,13 @@
 	@apply gap-y-2 lg:gap-y-[0.8dvw];
 }
 .subtitle {
-	@apply text-secondary-800;
-	@apply font-body text-xl font-medium lg:text-[1.8dvw];
+	@apply text-title;
+	@apply font-body text-xl font-semibold lg:text-[1.8dvw];
 	line-height: 1.4;
 }
 .content {
-	@apply text-secondary-700;
-	@apply font-body text-xl font-medium lg:text-[1.4dvw];
+	@apply text-text-color;
+	@apply font-body text-xl font-semibold lg:text-[1.4dvw];
 	line-height: 1.4;
 }
 .actions {

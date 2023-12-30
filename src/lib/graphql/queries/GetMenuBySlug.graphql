@@ -1,0 +1,68 @@
+fragment MenuItem on MenuItem {
+	id
+	name
+	url
+	collection {
+		id
+		name
+		slug
+		description
+		backgroundImage {
+			url
+			alt
+		}
+		seoTitle
+		seoDescription
+		products(first: 1, sortBy: { field: LAST_MODIFIED_AT, direction: DESC }) {
+			edges {
+				node {
+					updatedAt
+				}
+			}
+		}
+		bgColor: metafield(key: "ui.bgColor")
+	}
+	category {
+		id
+		name
+		slug
+		description
+		backgroundImage {
+			url
+			alt
+		}
+		seoTitle
+		seoDescription
+		products(first: 1, sortBy: { field: LAST_MODIFIED_AT, direction: DESC }) {
+			edges {
+				node {
+					updatedAt
+				}
+			}
+		}
+		bgColor: metafield(key: "ui.bgColor")
+	}
+	page {
+		slug
+	}
+}
+
+query GetMenuBySlug($slug: String!) {
+	menu(slug: $slug, channel: "default-channel") {
+		id
+		slug
+		name
+		items {
+			...MenuItem
+			children {
+				...MenuItem
+				children {
+					...MenuItem
+					children {
+						...MenuItem
+					}
+				}
+			}
+		}
+	}
+}

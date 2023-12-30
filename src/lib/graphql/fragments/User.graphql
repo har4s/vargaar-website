@@ -1,0 +1,19 @@
+fragment User on User {
+	id
+	firstName
+	lastName
+	email
+	phoneNumber
+	addresses {
+		id
+		firstName
+		lastName
+		city
+		cityArea
+		streetAddress1
+		streetAddress2
+		postalCode
+		phone
+		isDefaultShippingAddress
+	}
+}

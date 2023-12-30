@@ -19,18 +19,18 @@
 		@apply gap-y-5 lg:gap-y-[2dvw];
 	}
 	& .title {
-		@apply text-primary;
+		@apply text-rouge;
 		@apply font-display text-4xl font-black lg:text-[4dvw];
 		@apply mb-3 lg:mb-[1dvw];
 		line-height: 1;
 	}
 	& .subtitle {
-		@apply text-secondary-800;
+		@apply text-title;
 		@apply font-body text-xl font-semibold lg:text-[1.8dvw];
 		line-height: 1.4;
 	}
 	& .content {
-		@apply text-secondary-700;
+		@apply text-title;
 		@apply font-body text-lg font-normal lg:text-[1.3dvw];
 		line-height: 1.4;
 	}
@@ -41,7 +41,7 @@
 
 .relatedProducts {
 	@apply relative overflow-hidden py-12 lg:py-32;
-	@apply bg-[#FAF9F7];
+	@apply bg-beige-l;
 
 	& .Container {
 		@apply container;
@@ -61,14 +61,14 @@
 	& .title {
 		@apply w-full lg:max-w-[43.75dvw];
 		@apply font-display text-5xl lg:text-[4.2dvw];
-		@apply text-secondary-700;
+		@apply text-title;
 		line-height: 1;
 	}
 
 	& .subtitle {
 		@apply w-full lg:max-w-[41.6666666667dvw];
 		@apply text-lg font-semibold lg:text-[1.2dvw];
-		@apply text-secondary-600;
+		@apply text-text-color;
 		line-height: 1.4;
 	}
 

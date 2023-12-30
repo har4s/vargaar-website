@@ -1,0 +1,11 @@
+mutation CreateOTP($phoneNumber: String!) {
+	otpCreate(phoneNumber: $phoneNumber) {
+		token
+		createdAt
+		errors {
+			field
+			code
+			message
+		}
+	}
+}

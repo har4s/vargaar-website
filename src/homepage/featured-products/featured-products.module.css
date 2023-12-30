@@ -1,6 +1,6 @@
 .root {
 	@apply relative overflow-hidden py-12 lg:py-32;
-	@apply bg-[#FAF9F7];
+	@apply bg-beige-l;
 }
 
 .Container {
@@ -16,19 +16,22 @@
 
 .slider {
 	@apply !overflow-visible;
+	@screen lg {
+		@apply !overflow-hidden;
+	}
 }
 
 .title {
 	@apply w-full lg:max-w-[43.75dvw];
 	@apply font-display text-5xl lg:text-[4.2dvw];
-	@apply text-secondary-700;
+	@apply text-title;
 	line-height: 1;
 }
 
 .subtitle {
 	@apply w-full lg:max-w-[41.6666666667dvw];
 	@apply text-lg font-semibold lg:text-[1.2dvw];
-	@apply text-secondary-600;
+	@apply text-text-color;
 	line-height: 1.6;
 }
 
@@ -37,4 +40,5 @@
 }
 
 .product {
+	@apply h-full;
 }
