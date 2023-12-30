@@ -27,8 +27,8 @@ COPY . .
 # Learn more here: https://nextjs.org/telemetry
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
-ARG SALEOR_INSTANCE_URL
-ENV SALEOR_INSTANCE_URL ${SALEOR_INSTANCE_URL:-https://www.vargaar.com/graphql/}
+ARG NEXT_PUBLIC_SALEOR_API_URL
+ENV NEXT_PUBLIC_SALEOR_API_URL ${NEXT_PUBLIC_SALEOR_API_URL:-https://vargaar.com/graphql/}
 
 RUN yarn build
 
