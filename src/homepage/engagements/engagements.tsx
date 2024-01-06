@@ -14,7 +14,17 @@ export const Engagements: React.FC<Props> = ({ className }) => {
 			<div className={s.Container}>
 				<h2 className={s.title}>محتوا های ما</h2>
 				<div className={s.sliderContainer}>
-					<WknSwiper slidesPerView={3} slideClassName={s.slide}>
+					<WknSwiper
+						spaceBetween={20}
+						slidesPerView={1.1}
+						breakpoints={{
+							992: {
+								slidesPerView: 3,
+							},
+						}}
+						className={s.slider}
+						slideClassName={s.slide}
+					>
 						<EngagementCard
 							bgColor="#F1874F"
 							titleColor="#FFF295"

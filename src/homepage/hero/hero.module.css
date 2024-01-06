@@ -1,6 +1,7 @@
 .root {
 	@apply relative overflow-hidden;
-	@apply bg-jaune;
+	/* @apply bg-jaune; */
+	@apply bg-[#58392E];
 	@apply pt-28 lg:pt-[16.6666666667vw];
 }
 

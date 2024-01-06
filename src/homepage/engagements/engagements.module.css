@@ -16,6 +16,13 @@
 	}
 }
 
+.slider {
+	@apply !overflow-visible;
+	@screen lg {
+		@apply !overflow-hidden;
+	}
+}
+
 .slide {
 	@apply h-auto;
 }
