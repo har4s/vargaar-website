@@ -91,9 +91,22 @@ export const Hero: React.FC<Props> = ({ className }) => {
 
 	return (
 		<section ref={hero} className={cn(s.root, className)}>
+			<div className={s.bgContainer}>
+				<Image
+					className={s.bgImg}
+					src="/mae-mu-0EWWLx_etkw-unsplash.jpg"
+					alt=""
+					fill
+					data-prllxfrom='{"yPercent" : "20"}'
+					data-prllxto='{"yPercent" : "-20"}'
+					data-prllxstart="top bottom"
+					data-prllxend="bottom top"
+				/>
+				<div className={s.overlay} />
+			</div>
 			<div className={cn(s.Container)}>
 				<h1 ref={heading} className={s.heading}>
-					<strong>قهوه ورگار با دوز ایده آل از</strong>
+					<strong>قهوه ورگار با دوز ایده آل</strong>
 					<span ref={linesContainer} className={cn(s.lines, "lines")}>
 						<span className="active">مقدار کافئین</span>
 						<span>انرژی مثبت</span>

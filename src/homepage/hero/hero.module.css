@@ -4,6 +4,21 @@
 	@apply pt-28 lg:pt-[16.6666666667vw];
 }
 
+.bgContainer {
+	@apply z-0;
+	@apply absolute left-0 top-0 h-full w-full;
+}
+
+.overlay {
+	@apply absolute left-0 top-0 h-full w-full;
+	@apply bg-black bg-opacity-20;
+}
+
+.bgImg {
+	@apply h-full w-full object-cover object-center;
+	@apply scale-150;
+}
+
 .Container {
 	@apply flex flex-col;
 }
@@ -11,7 +26,7 @@
 .heading {
 	@apply relative;
 	@apply text-rouge;
-	@apply font-display text-[9vw] font-black;
+	@apply font-display text-[11vw] font-black;
 	@apply whitespace-nowrap;
 	@apply text-center;
 }
@@ -31,7 +46,7 @@
 	@apply absolute left-0 top-0;
 	@apply w-full;
 	@apply opacity-10;
-	@apply font-display text-[8vw] font-black;
+	@apply font-display text-[10vw] font-black;
 	@apply transition-all;
 	@apply transform;
 	line-height: 1;
@@ -74,7 +89,7 @@
 }
 
 .cup .img {
-	@apply lg:mt-[16.6666666667vw];
+	@apply lg:mt-[18.88888887vw];
 }
 
 @keyframes an-smoke-1 {
