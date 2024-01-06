@@ -1,5 +1,6 @@
 .root {
 	@apply relative py-20 lg:py-32;
+	@apply overflow-hidden;
 }
 .Container {
 	@apply container;
