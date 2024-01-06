@@ -14,11 +14,12 @@ import { cn } from "lib/utils";
 interface BaseProps {
 	className?: string;
 	children?: React.ReactNode;
+	slideClassName?: string;
 }
 
 interface RootProps extends BaseProps, SwiperOptions {}
 
-export const WknSwiper: React.FC<RootProps> = ({ className, children, ...props }) => {
+export const WknSwiper: React.FC<RootProps> = ({ className, children, slideClassName, ...props }) => {
 	const onDragStart: React.DragEventHandler<HTMLElement> = (e) => {
 		e.currentTarget.classList.add("dragging");
 	};
@@ -43,7 +44,7 @@ export const WknSwiper: React.FC<RootProps> = ({ className, children, ...props }
 			className={cn("wkn-swiper", s.root, className)}
 		>
 			{Children.map(children, (child) => (
-				<SwiperSlide>
+				<SwiperSlide className={slideClassName}>
 					<Child child={child} />
 				</SwiperSlide>
 			))}

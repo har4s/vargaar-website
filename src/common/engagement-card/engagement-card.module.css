@@ -1,2 +1,90 @@
 .root {
+	@apply relative;
+	@apply h-full w-full;
+	@apply min-h-[48rem];
+	@apply overflow-hidden;
+}
+
+.background {
+	@apply absolute left-0 top-0 h-full w-full;
+}
+
+.bgImageContainer {
+	@apply relative h-full w-full;
+}
+
+.bgImg {
+	@apply h-full w-full object-cover object-center;
+	z-index: 0;
+}
+
+.overlay {
+	@apply absolute left-0 top-0 h-full w-full;
+	@apply bg-black bg-opacity-40;
+	z-index: 1;
+}
+
+.content {
+	@apply relative;
+	@apply h-full w-full;
+	@apply flex flex-col justify-between;
+	position: relative;
+	z-index: 2;
+	padding: 30px;
+
+	@screen lg {
+		padding: 2.4305555556vw;
+	}
+}
+
+.body {
+	@apply flex flex-col;
+	@apply gap-y-5;
+}
+
+.title {
+	@apply font-display;
+	font-size: 1.6666666667vw;
+	max-width: 20.8333333333vw;
+	line-height: 1.2;
+	text-transform: uppercase;
+}
+
+.description {
+	@apply font-medium;
+	@screen lg {
+		font-size: 1.1111111111vw;
+		line-height: 1.5;
+	}
+}
+
+.bgImageContainer {
+	@apply invisible opacity-0;
+}
+
+.bgImg {
+	@apply scale-100;
+}
+
+.bgImg,
+.bgImageContainer,
+.title,
+.description,
+.link {
+	@apply transition-all;
+	@apply duration-500;
+}
+
+.root:hover .bgImageContainer {
+	@apply visible opacity-100;
+}
+
+.root:hover .bgImg {
+	@apply scale-110;
+}
+
+.root:hover .title,
+.root:hover .description,
+.root:hover .link {
+	@apply !text-white;
 }

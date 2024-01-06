@@ -6,6 +6,7 @@
 }
 
 .title {
+	@apply text-title;
 	@apply font-display text-xl font-bold;
 	@apply lg:max-w-[39.5833333333vw];
 	@screen lg {
@@ -13,4 +14,8 @@
 		margin-bottom: 4.1666666667vw;
 		line-height: 1;
 	}
+}
+
+.slide {
+	@apply h-auto;
 }
