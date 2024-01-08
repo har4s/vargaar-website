@@ -106,7 +106,7 @@ export const Hero: React.FC<Props> = ({ className }) => {
 			</div>
 			<div className={cn(s.Container)}>
 				<h1 ref={heading} className={s.heading}>
-					<strong>قهوه ورگار با دوز ایده آل</strong>
+					<strong>قهوه ورگار</strong>
 					<span ref={linesContainer} className={cn(s.lines, "lines")}>
 						<span className="active">مقدار کافئین</span>
 						<span>انرژی مثبت</span>

@@ -40,3 +40,23 @@ export const FeaturedProducts: React.FC<Props> = async ({ className }) => {
 		</section>
 	);
 };
+
+export const LoadingFeaturedProducts: React.FC<Props> = ({ className }) => {
+	return (
+		<section className={cn(s.root, s.loading, className)}>
+			<div className={cn(s.Container)}>
+				<div className={s.heading}>
+					<div className={s.title} />
+				</div>
+				<div className={s.sliderContainer}>
+					<ProductsSwiper className={cn(s.slider)}>
+						{/* eslint-disable-next-line @typescript-eslint/no-unsafe-assignment*/}
+						{[...Array(5)].map((product, idx) => (
+							<div className={s.product} key={idx} />
+						))}
+					</ProductsSwiper>
+				</div>
+			</div>
+		</section>
+	);
+};

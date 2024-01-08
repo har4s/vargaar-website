@@ -42,3 +42,19 @@
 .product {
 	@apply h-full;
 }
+
+.loading {
+	& .title {
+		@apply w-full !max-w-xs;
+		height: 3rem;
+		@screen lg {
+			height: 4.2dvw;
+		}
+		@apply animate-pulse bg-grey/40;
+		@apply pt-[100%];
+	}
+	& .product {
+		@apply animate-pulse bg-grey/40;
+		@apply pt-[100%];
+	}
+}
