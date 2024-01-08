@@ -63,8 +63,10 @@
 	}
 
 	@screen lg {
-		@apply font-yekan;
-		@apply text-lg font-semibold;
+		/* @apply font-yekan; */
+		@apply font-body;
+		@apply font-bold;
+		font-size: 0.8333333333vw;
 
 		& .arrow {
 			@apply rotate-0;

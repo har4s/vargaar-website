@@ -87,6 +87,9 @@
 	margin: 120px auto 0 auto;
 	transform: translateX(10%);
 	max-width: 60%;
+	@screen lg {
+		width: 40vw;
+	}
 }
 
 .cup .img {

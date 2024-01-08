@@ -1,10 +1,14 @@
 .root {
 	@apply inline-flex items-center justify-center whitespace-nowrap;
-	@apply font-yekan text-base font-semibold lg:text-[1.1vw];
+	@apply text-base font-semibold lg:text-[1.1vw];
 	@apply rounded-full px-6 py-3 lg:px-[3vw] lg:py-[1vw];
 	@apply cursor-pointer transition-colors;
 	@apply focus-visible:outline-none;
 	@apply disabled:pointer-events-none disabled:opacity-50;
+	gap: 6px;
+	@screen lg {
+		gap: 0.2944444444vw;
+	}
 }
 
 .default {
@@ -12,4 +16,42 @@
 }
 
 .light {
+}
+
+.clickable {
+	& .txt {
+		color: var(--white);
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1;
+		text-transform: none;
+		transition: transform 0.3s ease-in-out;
+		@screen lg {
+			font-size: 1.1111111111vw;
+		}
+	}
+	& .arrow {
+		opacity: 1;
+		position: relative;
+		transition: all 0.3s cubic-bezier(0.36, 0.33, 0, 1);
+		width: 20px;
+		@screen lg {
+			width: 1.3888888889vw;
+		}
+	}
+}
+
+html:not(.touch) .clickable:hover .txt {
+	transform: translateX(-12px);
+	@screen lg {
+		transform: translateX(-0.9116666667vw);
+	}
+}
+
+html:not(.touch) .clickable:hover .arrow {
+	opacity: 0;
+	transform: translateX(-20px);
+	@screen lg {
+		transform: translateX(-1.3888888889vw);
+	}
 }

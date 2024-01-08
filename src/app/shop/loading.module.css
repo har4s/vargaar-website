@@ -1,0 +1,42 @@
+.hTitle {
+	@apply animate-pulse bg-white/70;
+	@apply w-full !max-w-xs;
+	height: 3rem;
+	@screen lg {
+		height: 3.4722222222dvw;
+	}
+}
+
+.paragraph {
+	@apply flex flex-col;
+}
+
+.hSubtitle {
+	@apply animate-pulse bg-white/60;
+	@apply w-full !max-w-lg;
+	@apply mb-1.5;
+	@screen lg {
+		height: 1.1111111111vw;
+		@apply mb-[0.417vw];
+	}
+}
+
+.hSubtitle:last-child {
+	@apply w-full !max-w-md;
+}
+
+.filerItem {
+	@apply animate-pulse bg-grey/60;
+	width: 6rem;
+	height: 1.125rem;
+
+	@screen lg {
+		width: 6.667vw;
+		height: 1.25vw;
+	}
+}
+
+.product {
+	@apply animate-pulse bg-grey/40;
+	@apply !pt-[100%];
+}

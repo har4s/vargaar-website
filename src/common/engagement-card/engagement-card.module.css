@@ -44,14 +44,19 @@
 
 .title {
 	@apply font-display;
-	font-size: 1.6666666667vw;
-	max-width: 20.8333333333vw;
+	font-size: 6vw;
 	line-height: 1.2;
 	text-transform: uppercase;
+	@screen lg {
+		max-width: 20.8333333333vw;
+		font-size: 1.6666666667vw;
+	}
 }
 
 .description {
 	@apply font-medium;
+	font-size: 16px;
+
 	@screen lg {
 		font-size: 1.1111111111vw;
 		line-height: 1.5;

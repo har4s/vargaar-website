@@ -1,7 +1,8 @@
 .root {
 	@apply fixed left-0 top-0 z-30 w-full;
 	@apply transform transition-all duration-500;
-	@apply p-[1.7361111111dvw];
+	/* @apply p-[1.7361111111dvw]; */
+	padding: 0 6.25vw;
 }
 
 .root.hidden {
@@ -13,10 +14,14 @@
 }
 
 .Container {
-	@apply shadow-xl;
+	/* @apply shadow-xl; */
+	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 	@apply rounded-lg bg-white;
 	@apply px-4 py-4 lg:px-8;
 	@apply flex flex-row items-center justify-between;
+	@screen lg {
+		padding: 1.0833333333vw;
+	}
 }
 
 .logoContainer {
@@ -24,7 +29,10 @@
 }
 
 .logo {
-	@apply text-rouge h-10 w-auto lg:h-16;
+	@apply h-10 w-auto text-rouge;
+	@screen lg {
+		height: 3.33339vw;
+	}
 }
 
 .row {
@@ -45,7 +53,7 @@
 }
 .navLink span {
 	@apply font-yekan;
-	@apply text-links-color text-lg font-semibold;
+	@apply text-lg font-semibold text-links-color;
 }
 .navItem:hover .navLink span {
 	@apply text-bronze;
@@ -54,5 +62,9 @@
 	@apply mr-1 inline-flex;
 }
 .arrow svg {
-	@apply text-bronze h-5 w-5;
+	@apply h-5 w-5 text-bronze;
+	@screen lg {
+		width: 1.389vw;
+		height: 1.389vw;
+	}
 }

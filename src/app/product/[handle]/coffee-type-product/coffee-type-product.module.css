@@ -7,6 +7,8 @@
 .hero {
 	@apply relative;
 	@apply pb-20 pt-36 lg:pb-[5.5555555556dvw] lg:pt-[12.5dvw];
+	@apply flex flex-col;
+	@apply gap-y-10;
 	@screen lg {
 		@apply min-h-[52.7777777778dvw];
 		@apply flex flex-row items-center justify-center;

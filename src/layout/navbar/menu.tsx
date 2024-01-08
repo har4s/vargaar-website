@@ -25,7 +25,13 @@ export const Menu: React.FC<Props> = ({ className, menu, featuredProducts }) => 
 	const hasChildren = (item: MenuType) => !!item.children && item.children?.length > 0;
 	const itemsWithChildren = menu.filter((item) => hasChildren(item));
 	// const openMenu = () => setMenuOpen(true);
-	const toggleMenu = () => setMenuOpen((x) => !x);
+	const toggleMenu = () => {
+		// setMenuOpen((x) => !x)
+		const [firstSubmenu] = itemsWithChildren;
+		setSubmenu((current) => {
+			return !current ? firstSubmenu : undefined;
+		});
+	};
 
 	const handleLinkClick = (hasChildren: boolean, item: MenuType) => (e: any) => {
 		if (hasChildren) {

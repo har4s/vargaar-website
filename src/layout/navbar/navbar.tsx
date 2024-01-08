@@ -58,7 +58,7 @@ export const Navbar: React.FC<Props> = ({ className }) => {
 				</div>
 				<div className={cn(s.row, "justify-end")}>
 					<button className="text-rouge">
-						<ShoppingBagIcon className="h-6 w-6" />
+						<ShoppingBagIcon className="h-6 w-6 lg:h-[1.567vw] lg:w-[1.567vw]" />
 					</button>
 				</div>
 			</div>

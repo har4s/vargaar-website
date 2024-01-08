@@ -28,7 +28,7 @@
 	@screen lg {
 		@apply flex-row;
 		justify-content: space-between;
-		@apply pb-[2.0833333333vw] pe-[2.0833333333vw] ps-[5.5555555556vw] pt-[9.7222222222vw];
+		@apply pb-[2.0833333333vw] pe-[2.0833333333vw] ps-[5.5555555556vw] pt-[14.42222222vw];
 		gap: 2.7777777778vw;
 	}
 }

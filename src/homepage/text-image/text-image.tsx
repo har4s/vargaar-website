@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import s from "./text-image.module.css";
 import { cn } from "lib/utils";
-import { Button } from "ui";
+import { ClickableButton } from "ui";
 
 interface Props {
 	className?: string;
@@ -26,7 +26,7 @@ export const TextImage: React.FC<Props> = ({ className }) => {
 						</div>
 					</div>
 					<div className={s.actions}>
-						<Button>قهوه خودتو پیدا کن</Button>
+						<ClickableButton>قهوه خودتو پیدا کن</ClickableButton>
 					</div>
 				</div>
 				<div className={s.imageContainer}>
