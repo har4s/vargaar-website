@@ -24,7 +24,6 @@ export async function executeGraphQL<Result, Variables>(
 	} & (Variables extends Record<string, never> ? { variables?: never } : { variables: Variables }),
 ): Promise<Result> {
 	invariant(process.env.NEXT_PUBLIC_SALEOR_API_URL, "Missing NEXT_PUBLIC_SALEOR_API_URL env variable");
-	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	const { variables, headers, cache, revalidate, tags, withAuth } = options;
 
 	const withAuthHeaders = async () => {
@@ -57,8 +56,7 @@ export async function executeGraphQL<Result, Variables>(
 			query: operation.toString(),
 			...(variables && { variables }),
 		}),
-		// TODO: temporary
-		cache: "no-cache" as RequestCache,
+		cache,
 		next: { revalidate, tags },
 	};
 
