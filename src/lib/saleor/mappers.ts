@@ -171,6 +171,7 @@ export function flattenMenuItems(menuItems: null | undefined | MenuItemWithChild
 				...(path
 					? [
 							{
+								id: item.id,
 								path: path,
 								title: item.name,
 								collection,

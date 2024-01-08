@@ -15,11 +15,18 @@ interface BaseProps {
 	className?: string;
 	children?: React.ReactNode;
 	slideClassName?: string;
+	navigationClassName?: string;
 }
 
 interface RootProps extends BaseProps, SwiperOptions {}
 
-export const WknSwiper: React.FC<RootProps> = ({ className, children, slideClassName, ...props }) => {
+export const WknSwiper: React.FC<RootProps> = ({
+	className,
+	children,
+	slideClassName,
+	navigationClassName,
+	...props
+}) => {
 	const onDragStart: React.DragEventHandler<HTMLElement> = (e) => {
 		e.currentTarget.classList.add("dragging");
 	};
@@ -48,7 +55,7 @@ export const WknSwiper: React.FC<RootProps> = ({ className, children, slideClass
 					<Child child={child} />
 				</SwiperSlide>
 			))}
-			<div slot="navigation" className={s.navigation}>
+			<div slot="navigation" className={cn(s.navigation, navigationClassName)}>
 				<button className={cn(s.btn, "wkn-swiper-btn", "wkn-swiper-btn-next")}>
 					<span className={s.arrow}>
 						<ArrowRightIcon />

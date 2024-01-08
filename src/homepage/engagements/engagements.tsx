@@ -12,7 +12,9 @@ export const Engagements: React.FC<Props> = ({ className }) => {
 	return (
 		<div className={cn(s.root, className)}>
 			<div className={s.Container}>
-				<h2 className={s.title}>محتوا های ما</h2>
+				<div className={s.heading}>
+					<h2 className={s.title}>محتوا های ما</h2>
+				</div>
 				<div className={s.sliderContainer}>
 					<WknSwiper
 						spaceBetween={20}

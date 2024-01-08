@@ -1,10 +1,9 @@
-"use client";
-import React, { useLayoutEffect, useState } from "react";
-import { Observer } from "gsap/Observer";
+import React, { Suspense } from "react";
+// import { Observer } from "gsap/Observer";
 import Link from "next/link";
 import { ShoppingBagIcon } from "lucide-react";
 import s from "./navbar.module.css";
-import { Menu } from "./menu";
+import { MenuWrapper } from "./menu-wrapper";
 import { cn } from "lib/utils";
 import { Logo } from "ui";
 
@@ -14,41 +13,44 @@ interface Props {
 
 export const Navbar: React.FC<Props> = ({ className }) => {
 	// const [scrolled, setScrolled] = useState(false)
-	const [visible, setVisible] = useState(true);
+	// const [visible, setVisible] = useState(true);
 
-	useLayoutEffect(() => {
-		// const scrolledObserver = Observer.create({
-		//     target: window,
-		//     type: 'scroll',
-		//     onChange: (self) => {
-		//         console.log({ self })
-		//         if (window.scrollY > 50 && !scrolled) { setScrolled(true) }
-		//         if (window.scrollY <= 50 && scrolled) { setScrolled(false) }
-		//     }
-		// })
+	// useLayoutEffect(() => {
+	// const scrolledObserver = Observer.create({
+	//     target: window,
+	//     type: 'scroll',
+	//     onChange: (self) => {
+	//         console.log({ self })
+	//         if (window.scrollY > 50 && !scrolled) { setScrolled(true) }
+	//         if (window.scrollY <= 50 && scrolled) { setScrolled(false) }
+	//     }
+	// })
 
-		const onScrollObserver = Observer.create({
-			target: window,
-			type: "scroll",
-			tolerance: 50,
-			onUp: () => {
-				setVisible(true);
-			},
-			onDown: () => {
-				setVisible(false);
-			},
-		});
+	// 	const onScrollObserver = Observer.create({
+	// 		target: window,
+	// 		type: "scroll",
+	// 		tolerance: 50,
+	// 		onUp: () => {
+	// 			setVisible(true);
+	// 		},
+	// 		onDown: () => {
+	// 			setVisible(false);
+	// 		},
+	// 	});
 
-		return () => {
-			onScrollObserver.kill();
-		};
-	}, []);
+	// 	return () => {
+	// 		onScrollObserver.kill();
+	// 	};
+	// }, []);
 
 	return (
-		<header className={cn(s.root, { [s.hidden]: !visible }, className)}>
+		<header className={cn(s.root, className)}>
 			<div className={s.Container}>
-				<div className={cn("w-full lg:hidden")}>{/* <MegaMenu /> */}</div>
-				<Menu />
+				<div className={cn("w-full")}>
+					<Suspense>
+						<MenuWrapper />
+					</Suspense>
+				</div>
 				<div className={cn(s.logoContainer)}>
 					<Link href="/">
 						<Logo className={s.logo} />

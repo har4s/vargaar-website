@@ -1,5 +1,6 @@
 "use client";
 import React, { Children, isValidElement } from "react";
+import type { SwiperOptions } from "swiper/types";
 import s from "./products-swiper.module.css";
 import { WknSwiper } from "ui";
 import { cn } from "lib/utils";
@@ -7,25 +8,33 @@ import { cn } from "lib/utils";
 interface Props {
 	className?: string;
 	children?: React.ReactNode;
+	breakpoints?: SwiperOptions["breakpoints"];
+	navigationClassName?: string;
 }
 
-export const ProductsSwiper: React.FC<Props> = ({ className, children }) => {
+export const ProductsSwiper: React.FC<Props> = ({
+	className,
+	children,
+	navigationClassName,
+	breakpoints = {
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+		1536: {
+			slidesPerView: 4,
+		},
+	},
+}) => {
 	return (
 		<WknSwiper
 			spaceBetween={20}
 			slidesPerView={1.1}
-			breakpoints={{
-				768: {
-					slidesPerView: 2,
-				},
-				992: {
-					slidesPerView: 3,
-				},
-				1536: {
-					slidesPerView: 4,
-				},
-			}}
+			breakpoints={breakpoints}
 			className={cn(s.root, className)}
+			navigationClassName={navigationClassName}
 		>
 			{Children.map(children, (child) => (
 				<Child child={child} />

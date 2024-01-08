@@ -12,6 +12,7 @@
 	@apply flex flex-row items-center justify-start lg:justify-center;
 	@apply gap-x-10;
 	@apply overflow-x-scroll;
+	@apply overflow-y-hidden;
 	@apply w-full flex-nowrap;
 	&::-webkit-scrollbar {
 		display: none;

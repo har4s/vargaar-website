@@ -58,7 +58,7 @@ export async function executeGraphQL<Result, Variables>(
 			...(variables && { variables }),
 		}),
 		// TODO: temporary
-		cache: "no-cache" as RequestCache,
+		cache: "force-cache" as RequestCache,
 		next: { revalidate, tags },
 	};
 

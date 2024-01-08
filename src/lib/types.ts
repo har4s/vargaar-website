@@ -36,6 +36,7 @@ export interface Money {
 }
 
 export interface Menu {
+	id: string;
 	title: string;
 	path: string;
 	children?: Menu[];

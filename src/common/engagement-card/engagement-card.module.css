@@ -1,7 +1,7 @@
 .root {
 	@apply relative;
 	@apply h-full w-full;
-	@apply min-h-[48rem];
+	@apply min-h-[36rem] lg:min-h-[68.314vh];
 	@apply overflow-hidden;
 }
 

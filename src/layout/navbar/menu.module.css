@@ -1,10 +1,9 @@
 .root {
 	@apply -z-10;
-	@apply h-screen w-full max-w-xl;
+	@apply h-screen w-full;
 	@apply fixed bottom-0 left-0 right-0 top-0;
 	@apply bg-white;
 	@apply text-text-brown;
-	@apply hidden;
 
 	@screen lg {
 		@apply flex;
@@ -14,6 +13,7 @@
 		@apply bg-transparent;
 	}
 }
+
 .inner {
 	@apply p-10 pt-36;
 	@apply mt-auto;
@@ -24,6 +24,7 @@
 		@apply flex-row items-center justify-start;
 	}
 }
+
 .main {
 	@apply w-full;
 	@apply flex flex-col;
@@ -33,9 +34,11 @@
 		@apply gap-[1.0833333333vw];
 	}
 }
+
 .item {
 	@apply relative;
 }
+
 .link {
 	@apply inline-block;
 	@apply font-display;
@@ -71,4 +74,69 @@
 
 .item:hover .link span {
 	@apply text-bronze;
+}
+
+.submenus {
+	@apply w-full;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: -1;
+}
+
+.socials {
+}
+
+.btn {
+	background: 0;
+	border: 0;
+	cursor: pointer;
+	outline: 0;
+	padding: 10px;
+	pointer-events: all;
+	position: relative;
+	z-index: 10;
+
+	@screen lg {
+		@apply hidden;
+	}
+}
+
+.icon {
+	@apply space-y-1;
+}
+
+.line {
+	@apply bg-rouge;
+	border-radius: 6px;
+	display: block;
+	height: 2px;
+	transform-origin: right center;
+	transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	width: 20px;
+}
+
+.line:last-child {
+	transform: scaleX(0.6);
+}
+
+@media only screen and (max-width: 1024px) {
+	.root {
+		@apply bg-white;
+		align-items: flex-start;
+		bottom: 0;
+		display: flex;
+		height: 100dvh;
+		justify-content: center;
+		overflow-y: auto;
+		position: fixed;
+		right: 0;
+		transition: transform 0.64s cubic-bezier(0.36, 0.33, 0, 1);
+		width: 100%;
+		z-index: -1;
+		transform: translateX(100%);
+	}
+	.root.open {
+		transform: translateX(0);
+	}
 }
