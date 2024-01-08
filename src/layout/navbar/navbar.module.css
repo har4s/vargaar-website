@@ -1,8 +1,7 @@
 .root {
 	@apply fixed left-0 top-0 z-30 w-full;
 	@apply transform transition-all duration-500;
-	/* @apply p-[1.7361111111dvw]; */
-	padding: 0 6.25vw;
+	@apply p-[1.7361111111dvw];
 }
 
 .root.hidden {
