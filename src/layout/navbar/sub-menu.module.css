@@ -160,7 +160,7 @@
 	background: rgba(0, 0, 0, 0.03) !important;
 
 	@screen lg {
-		display: none;
+		@apply !hidden;
 	}
 }
 
