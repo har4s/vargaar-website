@@ -49,7 +49,7 @@ export const Newsletter: React.FC<Props> = ({ className }) => {
 					<h3 className={s.title}>
 						<strong>برشته کاری ورگار</strong>
 						<br />
-						طعمی تکرار نشدنی که پیر و جوان را به خود جلب کرده{" "}
+						ما را در شبکه های اجتماعی دنبال کنید
 					</h3>
 				</div>
 				<SocialIcons className={s.socials} />
