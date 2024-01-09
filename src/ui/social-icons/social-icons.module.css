@@ -1,0 +1,12 @@
+.root {
+	@apply flex flex-row items-center;
+	gap: 17px;
+	@apply text-links-color;
+}
+.item {
+	@apply rounded-full border-2 border-current p-2;
+
+	& svg {
+		@apply text-current;
+	}
+}

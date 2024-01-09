@@ -7,7 +7,7 @@ import s from "./menu.module.css";
 import { SubMenu } from "./sub-menu";
 import { cn } from "lib/utils";
 import type { Menu as MenuType, Product } from "lib/types";
-import { SocialIcons } from "common";
+import { SocialIcons } from "ui";
 
 interface Props {
 	menu: MenuType[];
@@ -26,11 +26,11 @@ export const Menu: React.FC<Props> = ({ className, menu, featuredProducts }) => 
 	const itemsWithChildren = menu.filter((item) => hasChildren(item));
 	// const openMenu = () => setMenuOpen(true);
 	const toggleMenu = () => {
-		// setMenuOpen((x) => !x)
-		const [firstSubmenu] = itemsWithChildren;
-		setSubmenu((current) => {
-			return !current ? firstSubmenu : undefined;
-		});
+		setMenuOpen((x) => !x);
+		// const [firstSubmenu] = itemsWithChildren;
+		// setSubmenu((current) => {
+		// 	return !current ? firstSubmenu : undefined;
+		// });
 	};
 
 	const handleLinkClick = (hasChildren: boolean, item: MenuType) => (e: any) => {

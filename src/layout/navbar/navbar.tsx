@@ -1,5 +1,4 @@
 import React, { Suspense } from "react";
-// import { Observer } from "gsap/Observer";
 import Link from "next/link";
 import { ShoppingBagIcon } from "lucide-react";
 import s from "./navbar.module.css";
@@ -12,29 +11,32 @@ interface Props {
 }
 
 export const Navbar: React.FC<Props> = ({ className }) => {
-	// const [scrolled, setScrolled] = useState(false)
-	// const [visible, setVisible] = useState(true);
+	// const [scrolled, setScrolled] = useState(false);
 
 	// useLayoutEffect(() => {
-	// const scrolledObserver = Observer.create({
-	//     target: window,
-	//     type: 'scroll',
-	//     onChange: (self) => {
-	//         console.log({ self })
-	//         if (window.scrollY > 50 && !scrolled) { setScrolled(true) }
-	//         if (window.scrollY <= 50 && scrolled) { setScrolled(false) }
-	//     }
-	// })
+	// 	// const scrolledObserver = Observer.create({
+	// 	// 	target: window,
+	// 	// 	type: "scroll",
+	// 	// 	onChange: (self) => {
+	// 	// 		console.log({ self });
+	// 	// 		if (window.scrollY > 50 && !scrolled) {
+	// 	// 			setScrolled(true);
+	// 	// 		}
+	// 	// 		if (window.scrollY <= 50 && scrolled) {
+	// 	// 			setScrolled(false);
+	// 	// 		}
+	// 	// 	},
+	// 	// });
 
 	// 	const onScrollObserver = Observer.create({
 	// 		target: window,
 	// 		type: "scroll",
 	// 		tolerance: 50,
 	// 		onUp: () => {
-	// 			setVisible(true);
+	// 			// setVisible(true);
 	// 		},
 	// 		onDown: () => {
-	// 			setVisible(false);
+	// 			// setVisible(false);
 	// 		},
 	// 	});
 

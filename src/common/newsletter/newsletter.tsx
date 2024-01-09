@@ -4,6 +4,7 @@ import Image from "next/image";
 import { gsap } from "gsap";
 import s from "./newsletter.module.css";
 import { cn } from "lib/utils";
+import { SocialIcons } from "ui";
 
 interface Props {
 	className?: string;
@@ -51,6 +52,7 @@ export const Newsletter: React.FC<Props> = ({ className }) => {
 						طعمی تکرار نشدنی که پیر و جوان را به خود جلب کرده{" "}
 					</h3>
 				</div>
+				<SocialIcons className={s.socials} />
 			</div>
 			<div className={s.images}>
 				<div className={cn(s.imageContainer, "imgContainer")}>

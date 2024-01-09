@@ -34,19 +34,28 @@
 
 .price {
 	@apply text-base font-semibold lg:text-[1dvw];
-	@apply text-title opacity-70;
+	@apply text-title/70;
 }
 
 .link {
-	@apply relative mt-1;
-	@apply text-links-color;
+	@apply relative;
+	@apply text-sm lg:text-[0.972vw];
+	@apply text-title/70 opacity-70;
+	@apply underline underline-offset-4;
+	& > a {
+		@apply flex flex-row items-center gap-x-2 lg:gap-x-[0.5vw];
+	}
+
+	& .arrow {
+		@apply inline-flex;
+	}
 }
 
 .root .details,
 .root .link,
 .root .thumbnailContainer {
 	@apply translate-y-5;
-	@apply transition-all duration-500;
+	@apply transition-all duration-200;
 }
 
 .root .link {

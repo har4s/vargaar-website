@@ -4,7 +4,7 @@ import Link from "next/link";
 import s from "./sub-menu.module.css";
 import { cn } from "lib/utils";
 import type { Menu, Product } from "lib/types";
-import { Button, Container } from "ui";
+import { Button, Container, SocialIcons } from "ui";
 import { ProductCard, ProductsSwiper } from "product";
 import { ClickOutside } from "lib/click-outside";
 
@@ -54,6 +54,7 @@ export const SubMenu: React.FC<Props> = ({ className, menu, current, featuredPro
 								</li>
 							))}
 						</ul>
+						<SocialIcons className={s.socials} />
 					</div>
 					<div className={s.featured}>
 						{!!featuredProducts && (

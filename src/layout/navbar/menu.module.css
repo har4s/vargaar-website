@@ -66,7 +66,7 @@
 		/* @apply font-yekan; */
 		@apply font-body;
 		@apply font-bold;
-		font-size: 0.8333333333vw;
+		font-size: 0.9333333333vw;
 
 		& .arrow {
 			@apply rotate-0;
@@ -87,6 +87,11 @@
 }
 
 .socials {
+	@apply pt-5 lg:pt-[1.389vw];
+
+	@screen lg {
+		@apply hidden;
+	}
 }
 
 .btn {

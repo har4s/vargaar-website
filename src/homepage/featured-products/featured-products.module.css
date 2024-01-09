@@ -4,12 +4,12 @@
 }
 
 .Container {
-	@apply container;
+	/* @apply container; */
 	@apply flex flex-col;
 }
 
 .heading {
-	@apply flex flex-col lg:flex-row lg:items-start lg:justify-between;
+	@apply flex flex-col lg:flex-row lg:items-end lg:justify-between;
 	@apply mb-10 lg:mb-[4.1666666667dvw];
 	@apply gap-y-5;
 }
@@ -17,7 +17,7 @@
 .slider {
 	@apply !overflow-visible;
 	@screen lg {
-		@apply !overflow-hidden;
+		/* @apply !overflow-hidden; */
 	}
 }
 
@@ -36,7 +36,10 @@
 }
 
 .sliderContainer {
-	@apply relative;
+	@apply relative px-4;
+	@screen lg {
+		padding: 0 2.0833333333vw;
+	}
 }
 
 .product {

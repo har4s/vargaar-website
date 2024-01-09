@@ -22,6 +22,7 @@
 }
 
 .container {
+	@apply overflow-y-hidden;
 	@apply flex flex-col;
 	padding: 140px 30px 30px;
 	gap: 40px;
@@ -176,4 +177,9 @@
 	hegith: 16px;
 	position: relative;
 	transition: all 0.3s cubic-bezier(0.36, 0.33, 0, 1);
+}
+
+.socials {
+	@apply mt-auto;
+	@apply pt-5 lg:pt-[1.389vw];
 }
