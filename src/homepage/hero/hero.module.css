@@ -1,8 +1,8 @@
 .root {
 	@apply relative overflow-hidden;
 	/* @apply bg-jaune; */
-	@apply bg-[#58392E];
-	@apply pt-28 lg:pt-[16.6666666667vw];
+	@apply bg-[#F4EFE8];
+	@apply pt-10 lg:pt-[8vw];
 }
 
 .bgContainer {
@@ -17,7 +17,9 @@
 
 .bgImg {
 	@apply h-full w-full object-cover object-center;
-	@apply scale-150;
+	/* @apply scale-150; */
+	mix-blend-mode: color-burn;
+	@apply opacity-30;
 }
 
 .Container {
@@ -25,16 +27,38 @@
 }
 
 .heading {
+	z-index: 1;
 	@apply relative;
-	@apply text-rouge;
-	@apply font-display text-[11vw] font-black;
+	@apply text-bistre;
+	@apply font-display font-black;
 	@apply whitespace-nowrap;
 	@apply text-center;
+	@apply flex flex-col items-center;
+	/* font-size: 4.0625rem;
+	@screen lg {
+		font-size: 12.625vw;
+	} */
+	& .title {
+		@apply object-contain object-center;
+		@screen lg {
+			max-width: 60%;
+		}
+		@media (max-width: 1024px) {
+			max-width: 90%;
+			@apply px-10;
+		}
+	}
 }
-.heading strong {
+/* .heading strong {
 	position: relative;
 	z-index: 1;
-}
+	letter-spacing: -0.20313rem;
+	line-height: 3.2rem;
+	@screen lg {
+		letter-spacing: -0.981vw;
+		line-height: 9.222vw;
+	}
+} */
 
 .lines {
 	position: absolute;
@@ -58,6 +82,10 @@
 
 .images {
 	@apply relative;
+	@apply -mb-[6rem];
+	@screen lg {
+		@apply -mb-[22.444vw];
+	}
 }
 
 .smoke .img {
@@ -84,7 +112,7 @@
 .cup .img {
 	width: 600px;
 	overflow: visible;
-	margin: 120px auto 0 auto;
+	margin: 0 auto 0 auto;
 	transform: translateX(10%);
 	max-width: 60%;
 	@screen lg {
@@ -93,7 +121,8 @@
 }
 
 .cup .img {
-	@apply lg:mt-[18.88888887vw];
+	@apply mt-5;
+	@apply lg:mt-0;
 }
 
 @keyframes an-smoke-1 {

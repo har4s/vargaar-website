@@ -1,5 +1,5 @@
 .root {
-	@apply bg-beige relative;
+	@apply relative bg-beige;
 	@apply pb-3 pt-20;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .logo {
-	@apply text-rouge h-24 w-auto;
+	@apply h-24 w-auto text-rouge;
 }
 
 .nav {
@@ -35,7 +35,7 @@
 }
 
 .itemTitle {
-	@apply text-bronze text-sm font-bold lg:text-[.8638888889dvw];
+	@apply text-sm font-bold text-bronze lg:text-[.8638888889dvw];
 }
 
 .children {
@@ -53,5 +53,5 @@
 }
 
 .copyright {
-	@apply text-text-color text-center text-sm lg:text-[.82222dvw];
+	@apply text-center text-sm text-text-color lg:text-[.82222dvw];
 }

@@ -10,7 +10,7 @@ export default function Home() {
 			<div className="min-h-screen">
 				<Navbar />
 				<Hero />
-				{/* <ImageFull src="/chicoree-leroux-boisson-chaude-2400x1200-c-default.webp" /> */}
+				<ImageFull className="bg-beige-l" src="/0a1c43fe21dec9a4449fcfd99401919f.png" />
 				<FeaturedProducts />
 				<TextImage />
 				<ImageFull src="/chicoree-leroux-reconfort-2400x1200-c-default.jpg">

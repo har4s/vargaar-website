@@ -17,6 +17,11 @@ const config: Config = {
 			yekan: "var(--yekan-bakh)",
 		},
 		colors: {
+			bistre: "#3D2B1F",
+			'linen': "#FAF0E6",
+			"isabelline": "#F4F0EC",
+			"persian-red": "#CC3333",
+			"ghost-white": "#F8F8FF",
 			white: "#ffffff",
 			black: "#000000",
 			grey: "#999999",

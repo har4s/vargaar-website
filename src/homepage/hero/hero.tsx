@@ -16,7 +16,7 @@ export const Hero: React.FC<Props> = ({ className }) => {
 	const hero = useRef(null);
 	const cup = useRef(null);
 	const heading = useRef(null);
-	const linesContainer = useRef<HTMLSpanElement>(null);
+	// const linesContainer = useRef<HTMLSpanElement>(null);
 
 	useLayoutEffect(() => {
 		// Prllx
@@ -25,8 +25,8 @@ export const Hero: React.FC<Props> = ({ className }) => {
 			start: "bottom bottom",
 			end: "bottom top",
 			onUpdate: (self) => heroPrllx.progress(self.progress),
-			onLeave: () => heroTL.pause(),
-			onEnterBack: () => heroTL.resume(),
+			// onLeave: () => heroTL.pause(),
+			// onEnterBack: () => heroTL.resume(),
 		});
 
 		const heroPrllx = gsap.timeline({
@@ -38,12 +38,12 @@ export const Hero: React.FC<Props> = ({ className }) => {
 			},
 		});
 
-		heroPrllx.fromTo(cup.current, { yPercent: 0 }, { yPercent: 50 }, 0);
-		heroPrllx.fromTo(heading.current, { yPercent: 0 }, { yPercent: 200 }, 0);
+		heroPrllx.fromTo(cup.current, { yPercent: 0 }, { yPercent: 30 }, 0);
+		heroPrllx.fromTo(heading.current, { yPercent: 0 }, { yPercent: 50 }, 0);
 
 		// Anim lines
-		const lines = (linesContainer && linesContainer.current?.querySelectorAll("span"))!;
-		const lineheight = lines[0].offsetHeight;
+		// const lines = (linesContainer && linesContainer.current?.querySelectorAll("span"))!;
+		// const lineheight = lines[0].offsetHeight;
 
 		// CurrentIndex
 		// const currentIndexWrapper = gsap.utils.wrap(0, lines.length);
@@ -55,37 +55,37 @@ export const Hero: React.FC<Props> = ({ className }) => {
 		// };
 
 		// Init Lines
-		gsap.set(lines, { y: (index) => index * lineheight });
+		// gsap.set(lines, { y: (index) => index * lineheight });
 
-		const heroTL = gsap.timeline({
-			defaults: {
-				duration: 1.6,
-				ease: "expo.inOut",
-			},
-			delay: 4,
-		});
+		// const heroTL = gsap.timeline({
+		// 	defaults: {
+		// 		duration: 1.6,
+		// 		ease: "expo.inOut",
+		// 	},
+		// 	delay: 4,
+		// });
 
-		heroTL.to(lines, {
-			// y: `-=${lineheight}`,
-			// modifiers: {
-			// 	y(value: number, target: HTMLSpanElement) {
-			// 		const idx = getChildIndex(target);
-			// 		const currentY = (idx + 1 * -currentIndex) * lineheight;
-			// 		const nextY = currentY + lineheight;
-			// 		const y = gsap.utils.unitize(gsap.utils.wrap(currentY, nextY));
-			// 		return y(value);
-			// 	},
-			// },
-			repeat: -1,
-			repeatDelay: 1.4,
-			repeatRefresh: true,
-			// onStart: updateCurrentLine,
-			// onRepeat: updateCurrentLine,
-		});
+		// heroTL.to(lines, {
+		// 	// y: `-=${lineheight}`,
+		// 	// modifiers: {
+		// 	// 	y(value: number, target: HTMLSpanElement) {
+		// 	// 		const idx = getChildIndex(target);
+		// 	// 		const currentY = (idx + 1 * -currentIndex) * lineheight;
+		// 	// 		const nextY = currentY + lineheight;
+		// 	// 		const y = gsap.utils.unitize(gsap.utils.wrap(currentY, nextY));
+		// 	// 		return y(value);
+		// 	// 	},
+		// 	// },
+		// 	repeat: -1,
+		// 	repeatDelay: 1.4,
+		// 	repeatRefresh: true,
+		// 	// onStart: updateCurrentLine,
+		// 	// onRepeat: updateCurrentLine,
+		// });
 		return () => {
 			heroST.kill();
 			heroPrllx.kill();
-			heroTL.kill();
+			// heroTL.kill();
 		};
 	}, []);
 
@@ -94,28 +94,20 @@ export const Hero: React.FC<Props> = ({ className }) => {
 			<div className={s.bgContainer}>
 				<Image
 					className={s.bgImg}
-					src="/mae-mu-0EWWLx_etkw-unsplash.jpg"
+					src="/bg-texture.png"
 					alt=""
 					fill
-					data-prllxfrom='{"yPercent" : "20"}'
-					data-prllxto='{"yPercent" : "-20"}'
-					data-prllxstart="top bottom"
-					data-prllxend="bottom top"
+					// data-prllxfrom='{"yPercent" : "0"}'
+					// data-prllxto='{"yPercent" : "20"}'
+					// data-prllxstart="top bottom"
+					// data-prllxend="bottom top"
 				/>
-				<div className={s.overlay} />
+				{/* <div className={s.overlay} /> */}
 			</div>
 			<div className={cn(s.Container)}>
-				<h1 ref={heading} className={s.heading}>
-					<strong>قهوه ورگار</strong>
-					<span ref={linesContainer} className={cn(s.lines, "lines")}>
-						<span className="active">مقدار کافئین</span>
-						<span>انرژی مثبت</span>
-						<span>حس خوب</span>
-						<span>مقدار کافئین</span>
-						<span>انرژی مثبت</span>
-						<span>حس خوب</span>
-					</span>
-				</h1>
+				<div ref={heading} className={s.heading}>
+					<Image src="vargaar-title.svg" width={837} height={544} alt="" className={s.title} />
+				</div>
 				<div className={s.images}>
 					<div className={cn(s.smoke, s.smoke1)}>
 						<Image className={s.img} src="/smoke.webp" alt="" width={1400} height={1226} />
@@ -124,7 +116,7 @@ export const Hero: React.FC<Props> = ({ className }) => {
 						<Image className={s.img} src="/smoke.webp" alt="" width={1400} height={1226} />
 					</div>
 					<div ref={cup} className={cn(s.cup)}>
-						<Image className={s.img} src="/cup.webp" alt="" width={1090} height={644} />
+						<Image className={s.img} src="/cup.png" alt="" width={1090} height={644} />
 					</div>
 				</div>
 			</div>
