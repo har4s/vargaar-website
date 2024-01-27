@@ -10,7 +10,7 @@ export default function Home() {
 			<div className="min-h-screen">
 				<Navbar />
 				<Hero />
-				<ImageFull className="bg-beige-l" src="/0a1c43fe21dec9a4449fcfd99401919f.png" />
+				<ImageFull className="bg-beige-l" src="/d65edd7c7cfc4697e9d15a35410a13c4.jpeg" />
 				<FeaturedProducts />
 				<TextImage />
 				<ImageFull src="/chicoree-leroux-reconfort-2400x1200-c-default.jpg">

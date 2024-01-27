@@ -29,13 +29,13 @@
 
 .itemContainer {
 	@apply flex flex-col items-center justify-center;
-	@apply gap-y-3;
+	@apply gap-y-4 lg:gap-y-[1vw];
 	@apply w-full max-w-md;
 	@apply mx-auto;
 }
 
 .itemTitle {
-	@apply text-sm font-bold text-bronze lg:text-[.8638888889dvw];
+	@apply text-base font-bold text-bronze lg:text-[1.0538888889dvw];
 }
 
 .children {
@@ -47,9 +47,8 @@
 }
 
 .link {
-	@apply text-base font-medium lg:text-[1.0538888889dvw];
+	@apply text-base font-semibold lg:text-[1.0538888889dvw];
 	@apply text-links-color;
-	@apply font-yekan;
 }
 
 .copyright {

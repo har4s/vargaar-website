@@ -25,10 +25,10 @@ export const FeaturedProducts: React.FC<Props> = async ({ className }) => {
 						<h2 className={s.title}>
 							<strong>{collection.title}</strong>
 						</h2>
-						<p className={s.subtitle}>
+						{/* <p className={s.subtitle}>
 							به لطف دانش منحصر به فرد، محصولات با کیفیت را به شما ارائه می دهد. طیف وسیعی از محصولات ما را
 							کشف کنید. برای هر سلیقه ای چیزی وجود دارد!
-						</p>
+						</p> */}
 					</div>
 				</Container>
 				<div className={s.sliderContainer}>

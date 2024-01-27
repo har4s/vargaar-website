@@ -20,15 +20,14 @@
 
 .overlay {
 	@apply absolute left-0 top-0 h-full w-full;
-	@apply bg-black bg-opacity-40;
 	z-index: 1;
+	background: linear-gradient(0deg, rgba(57, 40, 29, 0.55) 0%, rgba(57, 40, 29, 0.55) 100%);
 }
 
 .content {
-	@apply relative;
+	@apply absolute left-0 top-0;
 	@apply h-full w-full;
 	@apply flex flex-col justify-between;
-	position: relative;
 	z-index: 2;
 	padding: 30px;
 
@@ -38,6 +37,7 @@
 }
 
 .body {
+	@apply mt-auto;
 	@apply flex flex-col;
 	@apply gap-y-5;
 }
@@ -48,7 +48,7 @@
 	line-height: 1.2;
 	text-transform: uppercase;
 	@screen lg {
-		max-width: 20.8333333333vw;
+		max-width: 10.8333333333vw;
 		font-size: 1.6666666667vw;
 	}
 }
@@ -90,6 +90,7 @@
 
 .root:hover .title,
 .root:hover .description,
-.root:hover .link {
-	@apply !text-white;
+.root:hover .link,
+.root:hover .icon {
+	@apply !text-[#FAF0E6];
 }

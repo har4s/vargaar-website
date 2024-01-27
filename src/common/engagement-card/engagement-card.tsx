@@ -9,7 +9,7 @@ interface Props {
 	titleColor: string;
 	textColor: string;
 	bgImgSrc: string;
-	iconSrc: string;
+	icon: any;
 	title: string;
 	description: string;
 }
@@ -20,7 +20,7 @@ export const EngagementCard: React.FC<Props> = ({
 	titleColor,
 	textColor,
 	bgImgSrc,
-	iconSrc,
+	icon: Icon,
 	title,
 	description,
 }) => {
@@ -33,8 +33,8 @@ export const EngagementCard: React.FC<Props> = ({
 				</div>
 			</div>
 			<div className={s.content}>
-				<div className={s.iconContainer}>
-					<Image className={s.iconImage} src={iconSrc} alt="" width={60} height={60} />
+				<div className={s.iconContainer} style={{ color: titleColor }}>
+					<Icon className={s.icon} />
 				</div>
 				<div className={s.body}>
 					<span className={s.title} style={{ color: titleColor }}>

@@ -34,7 +34,7 @@
 
 .price {
 	@apply text-base font-semibold lg:text-[1dvw];
-	@apply text-title/70;
+	@apply text-[#39281D];
 }
 
 .link {
