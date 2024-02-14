@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./shop.module.css";
 import { cn } from "lib/utils";
-import { Filters, Hero, IntroTxt, ProductList } from "shop";
+import { Filters, Hero, ProductList } from "shop";
 import type { Menu, Product } from "lib/types";
 
 interface Props {
@@ -18,7 +18,7 @@ export const Shop: React.FC<Props> = ({ className, menu, products, title, descri
 			<Hero title={title} description={description} />
 			<Filters menu={menu} />
 			<ProductList products={products} />
-			<IntroTxt />
+			{/* <IntroTxt /> */}
 		</div>
 	);
 };

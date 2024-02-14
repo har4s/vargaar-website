@@ -17,6 +17,11 @@
 }
 
 .icon {
+	@apply grayscale transition-all;
+}
+
+.item:hover .icon {
+	@apply grayscale-0;
 }
 
 .title {

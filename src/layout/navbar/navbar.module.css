@@ -16,10 +16,10 @@
 	/* @apply shadow-xl; */
 	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 	@apply rounded-lg bg-white;
-	@apply px-4 py-4 lg:px-8;
+	@apply px-4 py-4;
 	@apply flex flex-row items-center justify-between;
 	@screen lg {
-		padding: 1.0833333333vw;
+		@apply px-[1.5833333333vw] py-[1.0833333333vw];
 	}
 }
 
@@ -28,14 +28,14 @@
 }
 
 .logo {
-	@apply h-10 w-auto text-rouge;
+	@apply h-10 w-auto text-text-brown;
 	@screen lg {
 		height: 3.33339vw;
 	}
 }
 
 .row {
-	@apply flex w-full flex-row items-center gap-x-4;
+	@apply flex w-full flex-row items-center gap-x-10;
 }
 
 .nav {
@@ -66,4 +66,58 @@
 		width: 1.389vw;
 		height: 1.389vw;
 	}
+}
+
+.mm {
+	@apply hidden;
+	@screen lg {
+		@apply w-full;
+		@apply flex flex-col;
+		@apply gap-[3.0833333333vw];
+		@apply flex-row items-center justify-end;
+		@apply gap-[1.33333333vw];
+	}
+}
+
+.itt {
+	@apply relative;
+}
+
+.lin {
+	@apply inline-block;
+	@apply font-display;
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 1.2;
+	position: relative;
+
+	& span {
+		display: inline;
+	}
+	& .arrow {
+		@apply mr-1 inline-flex;
+		vertical-align: middle;
+		@apply rotate-90;
+	}
+	& .arrow .icon {
+		fill: none;
+		left: 0;
+		top: 0;
+		@apply h-5 w-5 text-bronze;
+	}
+
+	@screen lg {
+		/* @apply font-yekan; */
+		@apply font-body;
+		@apply font-bold;
+		font-size: 1vw;
+
+		& .arrow {
+			@apply rotate-0;
+		}
+	}
+}
+
+.itt:hover .lin span {
+	@apply text-bronze;
 }

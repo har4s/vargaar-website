@@ -41,7 +41,7 @@ const config: Config = {
 			brun: "#7F1716",
 			bronze: "#DBAB00",
 			rose: "#F9CFCD",
-			rouge: "#E8443A",
+			rouge: "#CC3333",
 			title: "#45230F",
 			"text-brown": "#544218",
 			"text-color": "#7D6557",

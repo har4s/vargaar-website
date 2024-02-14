@@ -48,13 +48,13 @@
 	line-height: 1.2;
 	text-transform: uppercase;
 	@screen lg {
-		max-width: 10.8333333333vw;
-		font-size: 1.6666666667vw;
+		max-width: 12.9333333333vw;
+		font-size: 1.9666666667vw;
 	}
 }
 
 .description {
-	@apply font-medium;
+	@apply font-bold;
 	font-size: 16px;
 
 	@screen lg {

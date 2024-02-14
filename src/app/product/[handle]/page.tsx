@@ -4,7 +4,6 @@ import s from "./page.module.css";
 import { CoffeeTypeProduct } from "./coffee-type-product";
 import { cn } from "lib/utils";
 import { ProductCard, ProductsSwiper } from "product";
-import { ClickableButton } from "ui";
 import { getProduct, getProductRecommendations } from "lib/saleor";
 
 export const runtime = "edge";
@@ -64,9 +63,9 @@ const RelatedProducts: React.FC<{ productId: string }> = async ({ productId }) =
 			<div className={cn(s.Container)}>
 				<div className={s.heading}>
 					<h2 className={s.title}>
-						<strong>شما ممکن است دوست داشته باشید ...</strong>
+						<strong>محصولات مرتبط!</strong>
 					</h2>
-					<ClickableButton>تمام محصولات ما</ClickableButton>
+					{/* <ClickableButton>تمام محصولات ما</ClickableButton> */}
 				</div>
 				<div className={s.sliderContainer}>
 					<ProductsSwiper className={cn(s.slider)}>

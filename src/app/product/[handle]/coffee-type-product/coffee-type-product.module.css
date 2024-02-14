@@ -55,7 +55,7 @@
 		@apply text-center lg:text-start;
 		@apply text-base lg:text-[1.0833333333dvw];
 		@apply text-text-color;
-		@apply font-semibold;
+		@apply font-bold;
 		line-height: 1.4;
 	}
 

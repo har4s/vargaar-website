@@ -41,7 +41,7 @@
 
 .relatedProducts {
 	@apply relative overflow-hidden py-12 lg:py-32;
-	@apply bg-beige-l;
+	@apply bg-white;
 
 	& .Container {
 		@apply container;

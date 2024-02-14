@@ -1,7 +1,7 @@
 .root {
 	@apply inline-flex items-center justify-center whitespace-nowrap;
-	@apply text-base font-semibold lg:text-[1.1vw];
-	@apply rounded-full px-6 py-3 lg:px-[3vw] lg:py-[1vw];
+	@apply text-base font-bold lg:text-[1.1vw];
+	@apply rounded-full px-6 py-3 lg:px-[2vw] lg:py-[1vw];
 	@apply cursor-pointer transition-colors;
 	@apply focus-visible:outline-none;
 	@apply disabled:pointer-events-none disabled:opacity-50;

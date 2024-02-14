@@ -9,9 +9,10 @@ gsap.registerPlugin(ScrollTrigger);
 interface Props {
 	className?: string;
 	children?: React.ReactNode;
+	reverse?: boolean;
 }
 
-export const TextMarquee: React.FC<Props> = ({ className, children }) => {
+export const TextMarquee: React.FC<Props> = ({ className, children, reverse = false }) => {
 	const span = useRef<HTMLSpanElement>(null);
 	useLayoutEffect(() => {
 		const TL = gsap.to(span.current, {
@@ -21,8 +22,12 @@ export const TextMarquee: React.FC<Props> = ({ className, children }) => {
 				scrub: true,
 				top: "top center",
 			},
-			// @ts-expect-error ---
-			x: () => +(span.current!.offsetWidth - span.current!.parentNode!.offsetWidth),
+			x: () =>
+				!reverse
+					? // @ts-expect-error offsetWidth
+						+(span.current!.offsetWidth - span.current!.parentNode!.offsetWidth)
+					: // @ts-expect-error offsetWidth
+						+(span.current!.offsetWidth - span.current!.parentNode!.offsetWidth),
 		});
 		return () => {
 			TL.kill();

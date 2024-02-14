@@ -1,5 +1,5 @@
 .root {
-	@apply relative bg-beige;
+	@apply relative bg-[#F5F5F5];
 	@apply pb-3 pt-20;
 }
 
@@ -23,7 +23,7 @@
 
 .nav {
 	@apply mx-auto w-full max-w-screen-lg;
-	@apply flex flex-col lg:flex-row lg:justify-center;
+	@apply flex flex-col lg:flex-row lg:items-start lg:justify-center;
 	@apply gap-y-10;
 }
 
@@ -35,19 +35,19 @@
 }
 
 .itemTitle {
-	@apply text-base font-bold text-bronze lg:text-[1.0538888889dvw];
+	@apply font-display text-base font-bold text-bronze lg:text-[1.0538888889dvw];
 }
 
 .children {
 	@apply flex flex-col items-center justify-center;
-	@apply gap-y-2;
+	@apply gap-y-3;
 }
 
 .childContainer {
 }
 
 .link {
-	@apply text-base font-semibold lg:text-[1.0538888889dvw];
+	@apply text-base font-bold lg:text-[1.0538888889dvw];
 	@apply text-links-color;
 }
 
