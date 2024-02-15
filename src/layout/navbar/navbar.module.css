@@ -52,7 +52,7 @@
 }
 .navLink span {
 	@apply font-yekan;
-	@apply text-lg font-semibold text-links-color;
+	@apply text-lg font-semibold text-text-brown;
 }
 .navItem:hover .navLink span {
 	@apply text-bronze;
@@ -84,6 +84,7 @@
 }
 
 .lin {
+	@apply text-text-brown;
 	@apply inline-block;
 	@apply font-display;
 	font-size: 32px;

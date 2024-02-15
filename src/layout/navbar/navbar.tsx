@@ -76,7 +76,7 @@ export const Navbar: React.FC<Props> = ({ className, menu, featuredProducts }) =
 							</Link>
 						</li>
 					</ul>
-					<button className="text-text-5 flex flex-row items-center gap-x-3 lg:gap-x-[0.833vw]">
+					<button className="text-text-5 flex flex-row items-center gap-x-3 text-text-brown lg:gap-x-[0.833vw]">
 						{/* <ShoppingBagIcon className="h-6 w-6 lg:h-[1.567vw] lg:w-[1.567vw]" /> */}
 						<svg
 							width={22}
